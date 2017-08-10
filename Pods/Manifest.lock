@@ -1,0 +1,22 @@
+PODS:
+  - CameraBackground (1.1.2):
+    - CameraBackground/Resources (= 1.1.2)
+    - MiniLayout
+    - MultiToggleButton
+  - CameraBackground/Resources (1.1.2):
+    - MiniLayout
+    - MultiToggleButton
+  - MiniLayout (1.1.0)
+  - MultiToggleButton (1.5.2)
+
+DEPENDENCIES:
+  - CameraBackground
+
+SPEC CHECKSUMS:
+  CameraBackground: e49933d63c41661126bf5030a4c8c3b3e5cf2417
+  MiniLayout: 7664ed112a89d954e6ccb83b6ef5dc122fb77852
+  MultiToggleButton: 181887a5daca85992892ba70f07a8d3829207e69
+
+PODFILE CHECKSUM: 2923a79ccb43e195dd83c355e1d36637e9e3bbe0
+
+COCOAPODS: 1.2.1
