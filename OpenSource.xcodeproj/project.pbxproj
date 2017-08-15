@@ -10,6 +10,8 @@
 		1D0F5E060136B34B15BF2AF5 /* Pods_OpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F35BF817381BEABF98AB5B /* Pods_OpenSource.framework */; };
 		706251191F311785009D6B0A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706251181F311785009D6B0A /* CameraViewController.swift */; };
 		706D9B641F33E8BD000A01A4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D9B631F33E8BD000A01A4 /* DetailsViewController.swift */; };
+		70953DBE1F42F25B00ABCC12 /* Disease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70953DBD1F42F25B00ABCC12 /* Disease.swift */; };
+		70953DC01F42F7F100ABCC12 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70953DBF1F42F7F100ABCC12 /* TableViewCell.swift */; };
 		70C1B3801F30FACF00E80A7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C1B37F1F30FACF00E80A7F /* AppDelegate.swift */; };
 		70C1B3821F30FACF00E80A7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C1B3811F30FACF00E80A7F /* ViewController.swift */; };
 		70C1B3851F30FACF00E80A7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C1B3831F30FACF00E80A7F /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		5103FAEC9153E501CBAF55A1 /* Pods-OpenSource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenSource.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenSource/Pods-OpenSource.debug.xcconfig"; sourceTree = "<group>"; };
 		706251181F311785009D6B0A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		706D9B631F33E8BD000A01A4 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		70953DBD1F42F25B00ABCC12 /* Disease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disease.swift; sourceTree = "<group>"; };
+		70953DBF1F42F7F100ABCC12 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		70C1B37C1F30FACF00E80A7F /* OpenSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C1B37F1F30FACF00E80A7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70C1B3811F30FACF00E80A7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				70C1B3861F30FACF00E80A7F /* Assets.xcassets */,
 				70C1B3881F30FACF00E80A7F /* LaunchScreen.storyboard */,
 				70C1B38B1F30FACF00E80A7F /* Info.plist */,
+				70953DBD1F42F25B00ABCC12 /* Disease.swift */,
+				70953DBF1F42F7F100ABCC12 /* TableViewCell.swift */,
 			);
 			path = OpenSource;
 			sourceTree = "<group>";
@@ -454,7 +460,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				70C1B3821F30FACF00E80A7F /* ViewController.swift in Sources */,
+				70953DBE1F42F25B00ABCC12 /* Disease.swift in Sources */,
 				70C1B3801F30FACF00E80A7F /* AppDelegate.swift in Sources */,
+				70953DC01F42F7F100ABCC12 /* TableViewCell.swift in Sources */,
 				706251191F311785009D6B0A /* CameraViewController.swift in Sources */,
 				706D9B641F33E8BD000A01A4 /* DetailsViewController.swift in Sources */,
 			);

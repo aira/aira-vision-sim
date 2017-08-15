@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IBAnimatable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MiniLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,12 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44EC74572865B93D38F947F572121AE2</key>
+		<key>44FF4120D26E7F92D198D55703E03A2B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44FF4120D26E7F92D198D55703E03A2B</key>
+		<key>4DB37FDD6D9682249FC26FBD3DF9EBE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72885F3701B4DCAB7E7AB41C658BA870</key>
 		<dict>
 			<key>primary</key>
 			<true/>

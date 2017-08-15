@@ -26,6 +26,7 @@ class CameraViewController: UIViewController {
     @IBOutlet var overlayView: UIImageView!
     @IBOutlet var cameraView: UIView!
     var diseaseTitle:String = ""
+    var currentDisease:Disease?
     
     @IBAction func back(_ sender: Any) {
         self.performSegue(withIdentifier: "diseaseList", sender: nil)
@@ -137,7 +138,7 @@ class CameraViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "details" {
             if let destination = segue.destination as? DetailsViewController {
-                destination.diseaseTitle = diseaseTitle
+                destination.currentDisease = currentDisease
             }
         }
     }

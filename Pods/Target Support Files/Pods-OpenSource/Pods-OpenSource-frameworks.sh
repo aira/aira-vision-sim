@@ -90,11 +90,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/CameraBackground/CameraBackground.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/IBAnimatable/IBAnimatable.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MiniLayout/MiniLayout.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MultiToggleButton/MultiToggleButton.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/CameraBackground/CameraBackground.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/IBAnimatable/IBAnimatable.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MiniLayout/MiniLayout.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MultiToggleButton/MultiToggleButton.framework"
 fi

@@ -12,17 +12,27 @@ class DetailsViewController: UIViewController {
 
     @IBOutlet var navBar: UINavigationBar!
     var diseaseTitle:String = ""
+    @IBOutlet var descriptionText: UILabel!
+    @IBOutlet var areasAffected: UILabel!
+    @IBOutlet var peopleAffectedText: UILabel!
+    @IBOutlet var inheritedText: UILabel!
+    @IBOutlet var sourcesText: UILabel!
+    var currentDisease:Disease?
     override func viewDidLoad() {
         super.viewDidLoad()
-        navBar.topItem?.title = diseaseTitle
+        navBar.topItem?.title = currentDisease?.getDiseaseTitle
         // Do any additional setup after loading the view.
+        descriptionText.text = currentDisease?.getDescriptionText
+        areasAffected.text = currentDisease?.getAreasAffectedText
+        peopleAffectedText.text = currentDisease?.getPeopleText
+        if currentDisease?.getInheritedBool == false {
+            inheritedText.text = "No"
+        } else {
+            inheritedText.text = "Yes"
+        }
+        
+        sourcesText.text = currentDisease?.getSourcesText
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
