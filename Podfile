@@ -7,7 +7,6 @@ target 'OpenSource' do
 
   # Pods for OpenSource
   pod 'CameraBackground'
-  pod 'IBAnimatable'
 
   target 'OpenSourceTests' do
     inherit! :search_paths

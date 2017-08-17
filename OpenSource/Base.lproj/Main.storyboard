@@ -128,17 +128,29 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qTi-CM-iOX">
+                                <rect key="frame" x="8" y="629" width="359" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NbK-wd-icS"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderControl:" destination="9Vm-ao-sqy" eventType="valueChanged" id="PA9-JK-fXG"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7k2-yO-4Q6" firstAttribute="top" secondItem="YfI-SU-6Qe" secondAttribute="bottom" id="4jL-FG-AMJ"/>
                             <constraint firstAttribute="trailing" secondItem="UjK-gV-9Vg" secondAttribute="trailing" id="F9Z-fq-ih4"/>
+                            <constraint firstItem="qTi-CM-iOX" firstAttribute="leading" secondItem="8i4-wF-qEg" secondAttribute="leading" constant="10" id="P7f-1n-Anl"/>
                             <constraint firstItem="gx5-Ul-aw6" firstAttribute="top" secondItem="UjK-gV-9Vg" secondAttribute="bottom" id="PaO-gJ-iXb"/>
                             <constraint firstItem="7k2-yO-4Q6" firstAttribute="leading" secondItem="8i4-wF-qEg" secondAttribute="leading" id="RPZ-QB-b39"/>
                             <constraint firstItem="gx5-Ul-aw6" firstAttribute="top" secondItem="7k2-yO-4Q6" secondAttribute="bottom" id="T85-I2-m3x"/>
                             <constraint firstItem="YfI-SU-6Qe" firstAttribute="top" secondItem="8i4-wF-qEg" secondAttribute="top" id="VuO-ar-Zao"/>
                             <constraint firstAttribute="trailing" secondItem="YfI-SU-6Qe" secondAttribute="trailing" id="WIa-Dw-JUf"/>
+                            <constraint firstItem="gx5-Ul-aw6" firstAttribute="top" secondItem="qTi-CM-iOX" secondAttribute="bottom" constant="8" id="cfH-tx-QLz"/>
                             <constraint firstItem="YfI-SU-6Qe" firstAttribute="leading" secondItem="8i4-wF-qEg" secondAttribute="leading" id="kvH-JY-JNE"/>
+                            <constraint firstAttribute="trailing" secondItem="qTi-CM-iOX" secondAttribute="trailing" constant="10" id="nGf-SL-x0Z"/>
                             <constraint firstItem="UjK-gV-9Vg" firstAttribute="top" secondItem="YfI-SU-6Qe" secondAttribute="bottom" id="tzw-WJ-Xe0"/>
                             <constraint firstItem="UjK-gV-9Vg" firstAttribute="leading" secondItem="8i4-wF-qEg" secondAttribute="leading" id="v9q-Im-x2R"/>
                             <constraint firstAttribute="trailing" secondItem="7k2-yO-4Q6" secondAttribute="trailing" id="wlm-tY-ICI"/>
@@ -148,6 +160,7 @@
                         <outlet property="cameraView" destination="7k2-yO-4Q6" id="IyX-Vn-djg"/>
                         <outlet property="navBar" destination="YfI-SU-6Qe" id="jgx-qh-OWj"/>
                         <outlet property="overlayView" destination="UjK-gV-9Vg" id="EtE-f7-vdd"/>
+                        <outlet property="sliderControl" destination="qTi-CM-iOX" id="Fgp-6a-yj1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6a-D9-L8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,12 +197,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5S-KD-SoO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5S-KD-SoO">
                                 <rect key="frame" x="10" y="108" width="355" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="ofh-MD-Jp9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -220,7 +233,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeX-ug-vvF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeX-ug-vvF">
                                 <rect key="frame" x="10" y="365" width="355" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="GNK-5n-bVN"/>

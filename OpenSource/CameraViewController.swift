@@ -35,6 +35,10 @@ class CameraViewController: UIViewController {
         self.performSegue(withIdentifier: "details", sender: nil)
     }
     
+    @IBOutlet var sliderControl: UISlider!
+    @IBAction func sliderControl(_ sender: Any) {
+        print(sliderControl.value)
+    }
     @IBOutlet var navBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +82,7 @@ class CameraViewController: UIViewController {
                 let blur = UIBlurEffect(style: UIBlurEffectStyle.light)
                 let blurView = UIVisualEffectView(effect: blur)
                 blurView.frame = cameraView.bounds
-                blurView.alpha = 0.5
+                blurView.alpha = CGFloat(sliderControl.value)
                 cameraView.addSubview(blurView)
             case "Diabetic Retinopathy":
                 overlayView.image = UIImage(named: "DR")
@@ -86,27 +90,27 @@ class CameraViewController: UIViewController {
                 let blur = UIBlurEffect(style: UIBlurEffectStyle.light)
                 let blurView = UIVisualEffectView(effect: blur)
                 blurView.frame = cameraView.bounds
-                blurView.alpha = 0.7
+                blurView.alpha = CGFloat(sliderControl.value)
                 cameraView.addSubview(blurView)
             case "LHON":
                 overlayView.image = UIImage(named: "MacularDegen")
                 let blur = UIBlurEffect(style: UIBlurEffectStyle.light)
                 let blurView = UIVisualEffectView(effect: blur)
                 blurView.frame = cameraView.bounds
-                blurView.alpha = 0.5
+                blurView.alpha = CGFloat(sliderControl.value)
                 cameraView.addSubview(blurView)
             case "Stargardt Disease":
                 overlayView.image = UIImage(named: "MacularDegen")
                 let blur = UIBlurEffect(style: UIBlurEffectStyle.light)
                 let blurView = UIVisualEffectView(effect: blur)
                 blurView.frame = cameraView.bounds
-                blurView.alpha = 0.5
+                blurView.alpha = CGFloat(sliderControl.value)
                 cameraView.addSubview(blurView)
             case "Optic Nerve Hypoplasia":
                 let blur = UIBlurEffect(style: UIBlurEffectStyle.light)
                 let blurView = UIVisualEffectView(effect: blur)
                 blurView.frame = cameraView.bounds
-                blurView.alpha = 0.5
+                blurView.alpha = CGFloat(sliderControl.value)
                 cameraView.addSubview(blurView)
             case "Bardet Biedle Syndrome":
                 overlayView.image = UIImage(named: "RP")
@@ -117,7 +121,6 @@ class CameraViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         AppUtility.lockOrientation(.portrait)
         // Or to rotate and lock
         // AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
@@ -126,7 +129,6 @@ class CameraViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         // Don't forget to reset when view is being removed
         AppUtility.lockOrientation(.all)
     }
