@@ -9,9 +9,7 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
     @IBOutlet var navBar: UINavigationBar!
-    var diseaseTitle:String = ""
     @IBOutlet var descriptionText: UILabel!
     @IBOutlet var areasAffected: UILabel!
     @IBOutlet var peopleAffectedText: UILabel!
@@ -30,18 +28,17 @@ class DetailsViewController: UIViewController {
         } else {
             inheritedText.text = "Yes"
         }
-        
-        sourcesText.text = currentDisease?.getSourcesText
+        sourcesText.text = "Sources: " + (currentDisease?.getSourcesText)!
     }
-
-    /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "camView" {
+            if let destination = segue.destination as? CameraViewController {
+                destination.currentDisease = currentDisease
+            }
+        }
     }
-    */
-
 }
