@@ -196,6 +196,7 @@
 				70C1B37A1F30FACF00E80A7F /* Resources */,
 				3E58CBFD43C2244B00065AD0 /* [CP] Embed Pods Frameworks */,
 				50283969B6C1B49FDC90542B /* [CP] Copy Pods Resources */,
+				709A5C221F54CB3600A76BB1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -414,6 +415,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenSourceUITests/Pods-OpenSourceUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		709A5C221F54CB3600A76BB1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 81e9569b57846338c57a70550751894c3816266f e5d1a21d5a1a1ef94bc6942d4255628261b6b328887a80f967c76da19901646e";
+		};
 		878018085E64E72608BA7F55 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,7 +644,7 @@
 				DEVELOPMENT_TEAM = X8J5HT4M6B;
 				INFOPLIST_FILE = OpenSource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.samp.OpenSource;
+				PRODUCT_BUNDLE_IDENTIFIER = io.aira.visionsim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -644,7 +658,7 @@
 				DEVELOPMENT_TEAM = X8J5HT4M6B;
 				INFOPLIST_FILE = OpenSource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.samp.OpenSource;
+				PRODUCT_BUNDLE_IDENTIFIER = io.aira.visionsim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

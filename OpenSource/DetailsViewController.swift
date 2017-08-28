@@ -16,6 +16,7 @@
 // limitations under the License.
 
 import UIKit
+import Crashlytics
 
 class DetailsViewController: UIViewController {
     @IBOutlet var navBar: UINavigationBar!
@@ -24,6 +25,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet var peopleAffectedText: UILabel!
     @IBOutlet var inheritedText: UILabel!
     @IBOutlet var sourcesText: UILabel!
+    @IBOutlet var keyFactsText: UILabel!
+    
+    
     var currentDisease:Disease?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +41,14 @@ class DetailsViewController: UIViewController {
         descriptionText.text = currentDisease?.getDescriptionText
         areasAffected.text = currentDisease?.getAreasAffectedText
         peopleAffectedText.text = currentDisease?.getPeopleText
+        keyFactsText.text = currentDisease?.getKeyFacts
         if currentDisease?.getInheritedBool == false {
             inheritedText.text = "No"
         } else {
             inheritedText.text = "Yes"
         }
         sourcesText.text = "Sources: " + (currentDisease?.getSourcesText)!
+       
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "camView" {

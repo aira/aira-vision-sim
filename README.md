@@ -2,10 +2,8 @@
 
 [![Swift Version][swift-image]][swift-url]
 [![License][license-image]][license-url]
-[![Build](https://img.shields.io/travis/USER/REPO.svg)]
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-## Features
 
 <p align="center">
 <img src="screenshots/focus.png"> &nbsp; <img src="screenshots/countdown.png">
@@ -45,4 +43,3 @@ view.removeCameraBackground()
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE.txt
-[build-image]: https://img.shields.io/travis/USER/REPO.svg

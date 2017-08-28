@@ -7,6 +7,8 @@ target 'OpenSource' do
 
   # Pods for OpenSource
   pod 'CameraBackground'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   target 'OpenSourceTests' do
     inherit! :search_paths

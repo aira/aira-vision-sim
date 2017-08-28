@@ -48,14 +48,14 @@ class CameraViewController: UIViewController {
             case "Glaucoma":
                 switch segmentedControl.selectedSegmentIndex
                 {
-                case 0:
-                    overlayView.image = UIImage(named: "glaucoma_early")
-                case 1:
-                    overlayView.image = UIImage(named: "glaucoma_middle")
-                case 2:
-                    overlayView.image = UIImage(named: "glaucoma_late")
-                default:
-                    overlayView.image = UIImage(named: "glaucoma_early")
+                    case 0:
+                        overlayView.image = UIImage(named: "glaucoma_early")
+                    case 1:
+                        overlayView.image = UIImage(named: "glaucoma_middle")
+                    case 2:
+                        overlayView.image = UIImage(named: "glaucoma_late")
+                    default:
+                        overlayView.image = UIImage(named: "glaucoma_early")
                 }
             case "Macular Degeneration":
                 switch segmentedControl.selectedSegmentIndex
@@ -86,17 +86,16 @@ class CameraViewController: UIViewController {
             case "Stargardt Disease":
                 switch segmentedControl.selectedSegmentIndex
                 {
-                case 0:
-                    overlayView.image = UIImage(named: "mac_early")
-                case 1:
-                    overlayView.image = UIImage(named: "mac_middle")
-                case 2:
-                    overlayView.image = UIImage(named: "mac_late")
-                default:
-                    overlayView.image = UIImage(named: "mac_early")
-                    break
+                    case 0:
+                        overlayView.image = UIImage(named: "mac_early")
+                    case 1:
+                        overlayView.image = UIImage(named: "mac_middle")
+                    case 2:
+                        overlayView.image = UIImage(named: "mac_late")
+                    default:
+                        overlayView.image = UIImage(named: "mac_early")
+                        break
                 }
-            
             case "Leber Hereditary Optic Neuropathy (LHON)":
                 switch segmentedControl.selectedSegmentIndex
                 {
@@ -113,38 +112,49 @@ class CameraViewController: UIViewController {
             case "Diabetic Retinopathy":
                 switch segmentedControl.selectedSegmentIndex
                 {
-                case 0:
-                    overlayView.image = UIImage(named: "DR")
-                case 1:
-                    overlayView.image = UIImage(named: "rd2")
-                default:
-                    overlayView.image = UIImage(named: "DR")
-                    break
+                    case 0:
+                        overlayView.image = UIImage(named: "DR")
+                    case 1:
+                        overlayView.image = UIImage(named: "rd2")
+                    default:
+                        overlayView.image = UIImage(named: "DR")
                 }
             case "Retinitis Pigmentosa(RP)":
                 switch segmentedControl.selectedSegmentIndex
                 {
-                case 0:
-                    overlayView.image = UIImage(named: "glaucoma_early")
-                case 1:
-                    overlayView.image = UIImage(named: "glaucoma_middle")
-                case 2:
-                    overlayView.image = UIImage(named: "glaucoma_late")
-                default:
-                    overlayView.image = UIImage(named: "glaucoma_early")
+                    case 0:
+                        overlayView.image = UIImage(named: "glaucoma_early")
+                    case 1:
+                        overlayView.image = UIImage(named: "glaucoma_middle")
+                    case 2:
+                        overlayView.image = UIImage(named: "glaucoma_late")
+                    default:
+                        overlayView.image = UIImage(named: "glaucoma_early")
                 }
             case "Bardet Biedle Syndrome":
                 switch segmentedControl.selectedSegmentIndex
                 {
-                case 0:
-                    overlayView.image = UIImage(named: "glaucoma_early")
-                case 1:
-                    overlayView.image = UIImage(named: "glaucoma_middle")
-                case 2:
-                    overlayView.image = UIImage(named: "glaucoma_late")
-                default:
-                    overlayView.image = UIImage(named: "glaucoma_early")
+                    case 0:
+                        overlayView.image = UIImage(named: "glaucoma_early")
+                    case 1:
+                        overlayView.image = UIImage(named: "glaucoma_middle")
+                    case 2:
+                        overlayView.image = UIImage(named: "glaucoma_late")
+                    default:
+                        overlayView.image = UIImage(named: "glaucoma_early")
                 }
+            case "Neuromyelitis Optica (Devic's Disease)":
+                switch segmentedControl.selectedSegmentIndex
+                {
+                    case 0:
+                        overlayView.image = UIImage(named: "glaucoma_early")
+                    case 1:
+                        overlayView.image = UIImage(named: "glaucoma_middle")
+                    case 2:
+                        overlayView.image = UIImage(named: "Devic")
+                    default:
+                        overlayView.image = UIImage(named: "glaucoma_early")
+            }
             default:
                 break;
         }
@@ -202,7 +212,7 @@ class CameraViewController: UIViewController {
                 cameraView.addSubview(blurView)
                 segmentedControl.isHidden = true
             case "Neuromyelitis Optica (Devic's Disease)":
-                overlayView.image = UIImage(named: "Devic")
+                overlayView.image = UIImage(named: "mac_early")
                 sliderControl.isHidden = true
             case "Retinitis Pigmentosa(RP)":
                 overlayView.image = UIImage(named: "glaucoma_early")
