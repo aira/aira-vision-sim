@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1D0F5E060136B34B15BF2AF5 /* Pods_OpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F35BF817381BEABF98AB5B /* Pods_OpenSource.framework */; };
+		702F01291F549988004FDAB5 /* SanFranciscoFont-master in Resources */ = {isa = PBXBuildFile; fileRef = 702F01281F549988004FDAB5 /* SanFranciscoFont-master */; };
 		706251191F311785009D6B0A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706251181F311785009D6B0A /* CameraViewController.swift */; };
+		706D5C041F54917B001504D1 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D5C031F54917B001504D1 /* AboutViewController.swift */; };
 		706D9B641F33E8BD000A01A4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D9B631F33E8BD000A01A4 /* DetailsViewController.swift */; };
 		70953DBE1F42F25B00ABCC12 /* Disease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70953DBD1F42F25B00ABCC12 /* Disease.swift */; };
 		70953DC01F42F7F100ABCC12 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70953DBF1F42F7F100ABCC12 /* TableViewCell.swift */; };
 		70C1B3801F30FACF00E80A7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C1B37F1F30FACF00E80A7F /* AppDelegate.swift */; };
-		70C1B3821F30FACF00E80A7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C1B3811F30FACF00E80A7F /* ViewController.swift */; };
+		70C1B3821F30FACF00E80A7F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C1B3811F30FACF00E80A7F /* HomeViewController.swift */; };
 		70C1B3851F30FACF00E80A7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C1B3831F30FACF00E80A7F /* Main.storyboard */; };
 		70C1B3871F30FACF00E80A7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70C1B3861F30FACF00E80A7F /* Assets.xcassets */; };
 		70C1B38A1F30FACF00E80A7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C1B3881F30FACF00E80A7F /* LaunchScreen.storyboard */; };
@@ -42,13 +44,15 @@
 
 /* Begin PBXFileReference section */
 		5103FAEC9153E501CBAF55A1 /* Pods-OpenSource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenSource.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenSource/Pods-OpenSource.debug.xcconfig"; sourceTree = "<group>"; };
+		702F01281F549988004FDAB5 /* SanFranciscoFont-master */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "SanFranciscoFont-master"; sourceTree = "<group>"; };
 		706251181F311785009D6B0A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		706D5C031F54917B001504D1 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		706D9B631F33E8BD000A01A4 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		70953DBD1F42F25B00ABCC12 /* Disease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disease.swift; sourceTree = "<group>"; };
 		70953DBF1F42F7F100ABCC12 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		70C1B37C1F30FACF00E80A7F /* OpenSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C1B37F1F30FACF00E80A7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70C1B3811F30FACF00E80A7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		70C1B3811F30FACF00E80A7F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		70C1B3841F30FACF00E80A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70C1B3861F30FACF00E80A7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70C1B3891F30FACF00E80A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,8 +136,9 @@
 		70C1B37E1F30FACF00E80A7F /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
+				702F01281F549988004FDAB5 /* SanFranciscoFont-master */,
 				70C1B37F1F30FACF00E80A7F /* AppDelegate.swift */,
-				70C1B3811F30FACF00E80A7F /* ViewController.swift */,
+				70C1B3811F30FACF00E80A7F /* HomeViewController.swift */,
 				706D9B631F33E8BD000A01A4 /* DetailsViewController.swift */,
 				706251181F311785009D6B0A /* CameraViewController.swift */,
 				70C1B3831F30FACF00E80A7F /* Main.storyboard */,
@@ -142,6 +147,7 @@
 				70C1B38B1F30FACF00E80A7F /* Info.plist */,
 				70953DBD1F42F25B00ABCC12 /* Disease.swift */,
 				70953DBF1F42F7F100ABCC12 /* TableViewCell.swift */,
+				706D5C031F54917B001504D1 /* AboutViewController.swift */,
 			);
 			path = OpenSource;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70C1B38A1F30FACF00E80A7F /* LaunchScreen.storyboard in Resources */,
+				702F01291F549988004FDAB5 /* SanFranciscoFont-master in Resources */,
 				70C1B3871F30FACF00E80A7F /* Assets.xcassets in Resources */,
 				70C1B3851F30FACF00E80A7F /* Main.storyboard in Resources */,
 			);
@@ -459,9 +466,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70C1B3821F30FACF00E80A7F /* ViewController.swift in Sources */,
+				70C1B3821F30FACF00E80A7F /* HomeViewController.swift in Sources */,
 				70953DBE1F42F25B00ABCC12 /* Disease.swift in Sources */,
 				70C1B3801F30FACF00E80A7F /* AppDelegate.swift in Sources */,
+				706D5C041F54917B001504D1 /* AboutViewController.swift in Sources */,
 				70953DC01F42F7F100ABCC12 /* TableViewCell.swift in Sources */,
 				706251191F311785009D6B0A /* CameraViewController.swift in Sources */,
 				706D9B641F33E8BD000A01A4 /* DetailsViewController.swift in Sources */,

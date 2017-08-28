@@ -9,8 +9,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
+        <array key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+        </array>
+        <array key="SanFranciscoDisplay-Semibold.otf">
+            <string>SanFranciscoDisplay-Semibold</string>
+        </array>
+        <array key="SanFranciscoText-Regular.otf">
+            <string>SanFranciscoText-Regular</string>
+        </array>
+        <array key="SanFranciscoText-Semibold.otf">
+            <string>SanFranciscoText-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -18,7 +27,7 @@
         <scene sceneID="PtF-IE-xsN">
             <objects>
                 <navigationController id="CZs-99-Me1" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cGD-Lr-rDc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cGD-Lr-rDc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -28,12 +37,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSk-CL-zqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1674" y="104"/>
+            <point key="canvasLocation" x="-1890" y="104"/>
         </scene>
         <!--Diseases-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="OpenSource" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="HomeViewController" customModule="OpenSource" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -59,7 +68,7 @@
                                                         <constraint firstAttribute="height" constant="45" id="Ri7-L5-rjv"/>
                                                         <constraint firstAttribute="width" constant="320" id="sHh-vV-MfF"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -111,9 +120,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-857" y="104"/>
+            <point key="canvasLocation" x="-1138" y="104"/>
         </scene>
-        <!--View Controller-->
+        <!--About-->
         <scene sceneID="H3D-JO-J6j">
             <objects>
                 <viewController id="4gI-Zw-QLr" sceneMemberID="viewController">
@@ -124,12 +133,29 @@
                     <view key="view" contentMode="scaleToFill" id="6zw-cp-sgg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brought to you by Aira Tech Corp. We made this project to educate people about different types of blindnesses." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nu-xz-tLw">
+                                <rect key="frame" x="59" y="253" width="257" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="MTW-jI-d6O"/>
+                                    <constraint firstAttribute="height" constant="161" id="ZzK-NZ-J80"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Nu-xz-tLw" firstAttribute="centerY" secondItem="6zw-cp-sgg" secondAttribute="centerY" id="SXJ-IN-zkW"/>
+                            <constraint firstItem="1Nu-xz-tLw" firstAttribute="centerX" secondItem="6zw-cp-sgg" secondAttribute="centerX" id="mF0-EO-abL"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="About" id="iB9-hc-Zsr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxt-Xd-PMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="-586"/>
+            <point key="canvasLocation" x="120.8" y="-591.45427286356824"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="C0T-Sn-WjL">
@@ -223,111 +249,105 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13n-66-HCL">
-                                <rect key="frame" x="10" y="74" width="355" height="25"/>
+                                <rect key="frame" x="26" y="84" width="329" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="pAD-HF-jF0"/>
+                                    <constraint firstAttribute="height" constant="21" id="QTj-2P-YRR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoText-Semibold" family="San Francisco Text" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5S-KD-SoO">
-                                <rect key="frame" x="10" y="107" width="355" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5S-KD-SoO">
+                                <rect key="frame" x="26" y="107" width="329" height="19.5"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Areas of the Eye Affected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Hw-U0-ymX">
-                                <rect key="frame" x="10" y="134.5" width="355" height="21"/>
+                                <rect key="frame" x="26" y="141.5" width="329" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="z9t-zH-ffd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Semibold" family="San Francisco Display" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApS-Vp-RHJ">
-                                <rect key="frame" x="10" y="157.5" width="355" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="ijm-Rl-EvU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="26" y="164.5" width="329" height="20"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of People Affected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukB-oc-fNQ">
-                                <rect key="frame" x="10" y="210.5" width="243" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of People Affected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukB-oc-fNQ">
+                                <rect key="frame" x="26" y="199.5" width="253" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Odg-iy-ZB6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoText-Semibold" family="San Francisco Text" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeX-ug-vvF">
-                                <rect key="frame" x="10" y="233.5" width="355" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="GNK-5n-bVN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeX-ug-vvF">
+                                <rect key="frame" x="26" y="222.5" width="329" height="20"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inherited?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eb-qK-T3a">
-                                <rect key="frame" x="10" y="289.5" width="89" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inherited?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eb-qK-T3a">
+                                <rect key="frame" x="26" y="257.5" width="96.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="UJU-mR-ISK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoText-Semibold" family="San Francisco Text" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-G3-coD">
-                                <rect key="frame" x="10" y="312.5" width="355" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehh-G3-coD">
+                                <rect key="frame" x="26" y="280.5" width="329" height="19.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="ti7-7k-b4O"/>
+                                    <constraint firstAttribute="height" constant="20" id="whV-Bz-r94"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9d-yh-2hR">
-                                <rect key="frame" x="10" y="636" width="355" height="21"/>
+                                <rect key="frame" x="26" y="636" width="329" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="0dc-ZQ-AlS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9eb-qK-T3a" firstAttribute="top" secondItem="NeX-ug-vvF" secondAttribute="bottom" constant="8" id="4L8-ld-dRl"/>
-                            <constraint firstAttribute="trailing" secondItem="NeX-ug-vvF" secondAttribute="trailing" constant="10" id="6m2-qk-Eci"/>
-                            <constraint firstItem="3Hw-U0-ymX" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="10" id="7bt-yW-x8s"/>
-                            <constraint firstAttribute="trailing" secondItem="Ehh-G3-coD" secondAttribute="trailing" constant="10" id="ARd-RU-t1i"/>
-                            <constraint firstItem="ukB-oc-fNQ" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="10" id="B4R-KP-zwM"/>
-                            <constraint firstAttribute="trailing" secondItem="H5S-KD-SoO" secondAttribute="trailing" constant="10" id="Bmr-rd-CNF"/>
+                            <constraint firstItem="9eb-qK-T3a" firstAttribute="top" secondItem="NeX-ug-vvF" secondAttribute="bottom" constant="15" id="4L8-ld-dRl"/>
+                            <constraint firstAttribute="trailing" secondItem="NeX-ug-vvF" secondAttribute="trailing" constant="20" id="6m2-qk-Eci"/>
+                            <constraint firstItem="3Hw-U0-ymX" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="26" id="7bt-yW-x8s"/>
+                            <constraint firstAttribute="trailing" secondItem="Ehh-G3-coD" secondAttribute="trailing" constant="20" id="ARd-RU-t1i"/>
+                            <constraint firstItem="ukB-oc-fNQ" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="26" id="B4R-KP-zwM"/>
+                            <constraint firstAttribute="trailing" secondItem="H5S-KD-SoO" secondAttribute="trailing" constant="20" id="Bmr-rd-CNF"/>
                             <constraint firstItem="Ehh-G3-coD" firstAttribute="top" secondItem="9eb-qK-T3a" secondAttribute="bottom" constant="2" id="Brk-Or-B8p"/>
-                            <constraint firstItem="NeX-ug-vvF" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="10" id="CcE-Rk-ajE"/>
-                            <constraint firstAttribute="trailing" secondItem="ApS-Vp-RHJ" secondAttribute="trailing" constant="10" id="HtO-sk-Wwl"/>
+                            <constraint firstItem="NeX-ug-vvF" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="26" id="CcE-Rk-ajE"/>
+                            <constraint firstAttribute="trailing" secondItem="ApS-Vp-RHJ" secondAttribute="trailing" constant="20" id="HtO-sk-Wwl"/>
                             <constraint firstItem="c38-WZ-8tS" firstAttribute="top" secondItem="d9d-yh-2hR" secondAttribute="bottom" constant="10" id="KjS-lx-mPv"/>
-                            <constraint firstItem="13n-66-HCL" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="10" id="MT6-0t-Zyr"/>
+                            <constraint firstItem="13n-66-HCL" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="26" id="MT6-0t-Zyr"/>
                             <constraint firstItem="NeX-ug-vvF" firstAttribute="top" secondItem="ukB-oc-fNQ" secondAttribute="bottom" constant="2" id="NYC-kC-ULW"/>
-                            <constraint firstItem="3Hw-U0-ymX" firstAttribute="top" secondItem="H5S-KD-SoO" secondAttribute="bottom" constant="8" id="Qap-Up-VST"/>
-                            <constraint firstAttribute="trailing" secondItem="3Hw-U0-ymX" secondAttribute="trailing" constant="10" id="Qi0-rG-wdp"/>
-                            <constraint firstItem="d9d-yh-2hR" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="10" id="SRF-Un-zIr"/>
-                            <constraint firstItem="13n-66-HCL" firstAttribute="top" secondItem="Dhf-9e-Te6" secondAttribute="bottom" constant="10" id="VxW-cx-o26"/>
-                            <constraint firstItem="ukB-oc-fNQ" firstAttribute="top" secondItem="ApS-Vp-RHJ" secondAttribute="bottom" constant="8" id="XkA-z4-tlI"/>
-                            <constraint firstItem="9eb-qK-T3a" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="10" id="aQP-Ei-GD6"/>
-                            <constraint firstItem="H5S-KD-SoO" firstAttribute="top" secondItem="13n-66-HCL" secondAttribute="bottom" constant="8" id="b5r-K6-tJK"/>
-                            <constraint firstAttribute="trailing" secondItem="13n-66-HCL" secondAttribute="trailing" constant="10" id="dfG-gk-OEk"/>
+                            <constraint firstItem="3Hw-U0-ymX" firstAttribute="top" secondItem="H5S-KD-SoO" secondAttribute="bottom" constant="15" id="Qap-Up-VST"/>
+                            <constraint firstAttribute="trailing" secondItem="3Hw-U0-ymX" secondAttribute="trailing" constant="20" id="Qi0-rG-wdp"/>
+                            <constraint firstItem="d9d-yh-2hR" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="26" id="SRF-Un-zIr"/>
+                            <constraint firstItem="13n-66-HCL" firstAttribute="top" secondItem="Dhf-9e-Te6" secondAttribute="bottom" constant="20" id="VxW-cx-o26"/>
+                            <constraint firstItem="ukB-oc-fNQ" firstAttribute="top" secondItem="ApS-Vp-RHJ" secondAttribute="bottom" constant="15" id="XkA-z4-tlI"/>
+                            <constraint firstItem="9eb-qK-T3a" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="26" id="aQP-Ei-GD6"/>
+                            <constraint firstItem="H5S-KD-SoO" firstAttribute="top" secondItem="13n-66-HCL" secondAttribute="bottom" constant="2" id="b5r-K6-tJK"/>
+                            <constraint firstAttribute="trailing" secondItem="13n-66-HCL" secondAttribute="trailing" constant="20" id="dfG-gk-OEk"/>
                             <constraint firstItem="ApS-Vp-RHJ" firstAttribute="top" secondItem="3Hw-U0-ymX" secondAttribute="bottom" constant="2" id="mLz-6c-O08"/>
-                            <constraint firstAttribute="trailing" secondItem="d9d-yh-2hR" secondAttribute="trailing" constant="10" id="oXw-m4-zJu"/>
-                            <constraint firstItem="H5S-KD-SoO" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="10" id="pDB-9v-t2B"/>
-                            <constraint firstItem="Ehh-G3-coD" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="10" id="thA-4b-h9j"/>
-                            <constraint firstItem="ApS-Vp-RHJ" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="10" id="xm2-AL-veO"/>
+                            <constraint firstAttribute="trailing" secondItem="d9d-yh-2hR" secondAttribute="trailing" constant="20" id="oXw-m4-zJu"/>
+                            <constraint firstItem="H5S-KD-SoO" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="26" id="pDB-9v-t2B"/>
+                            <constraint firstItem="Ehh-G3-coD" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="26" id="thA-4b-h9j"/>
+                            <constraint firstItem="ApS-Vp-RHJ" firstAttribute="leading" secondItem="46l-7f-8mE" secondAttribute="leading" constant="26" id="xm2-AL-veO"/>
                         </constraints>
                     </view>
                     <connections>

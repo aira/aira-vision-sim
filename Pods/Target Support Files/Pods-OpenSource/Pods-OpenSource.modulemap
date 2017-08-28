@@ -1,0 +1,6 @@
+framework module Pods_OpenSource {
+  umbrella header "Pods-OpenSource-umbrella.h"
+
+  export *
+  module * { export * }
+}

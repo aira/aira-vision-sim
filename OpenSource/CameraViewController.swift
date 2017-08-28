@@ -1,10 +1,19 @@
 //
-//  CameraViewController.swift
-//  OpenSource
+// CameraViewController.swift
 //
-//  Created by Haasith Sanka on 8/1/17.
-//  Copyright © 2017 Haasith Sanka. All rights reserved.
+// Copyright 2017 Aira Tech Inc.
 //
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 struct AppUtility {
     static func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
@@ -145,14 +154,23 @@ class CameraViewController: UIViewController {
     @IBAction func sliderControl(_ sender: Any) {
         blurView.alpha = CGFloat(sliderControl.value)
     }
-    @IBOutlet var navBar: UINavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         cameraView.addCameraBackground(.back, buttonMargins: view.layoutMargins)
 //        cameraView.addCameraBackground()
         blurView.effect = blur
         //navBar.topItem?.title = currentDisease?.getDiseaseTitle
-        self.title = currentDisease?.getDiseaseTitle
+        if currentDisease?.getDiseaseTitle == "Leber Hereditary Optic Neuropathy (LHON)" {
+            self.title = "LHON"
+        } else if currentDisease?.getDiseaseTitle == "Neuromyelitis Optica (Devic's Disease)" {
+            self.title = "Devic's Disease"
+        } else {
+            self.title = currentDisease?.getDiseaseTitle
+        }
+        cameraView.removeCameraControls()
+        segmentedControl.tintColor = hexStringToUIColor(hex: "#21BECE")
+        segmentedControl.backgroundColor = UIColor.white
+        segmentedControl.layer.cornerRadius = 5
         diseaseTitle = (currentDisease?.getDiseaseTitle)!
         applyFilter()
     }
@@ -247,5 +265,29 @@ class CameraViewController: UIViewController {
                 destination.currentDisease = currentDisease
             }
         }
+    }
+}
+
+extension UIViewController {
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 }
