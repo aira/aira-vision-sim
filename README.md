@@ -2,15 +2,15 @@
 
 [![Swift Version][swift-image]][swift-url]
 [![License][license-image]][license-url]
-[![Platform](https://img.shields.io/cocoapods/p/CameraBackground.svg?style=flat)](http://cocoapods.org/pods/CameraBackground)
+[![Build][build-image]]
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## Features
 
-<!-- <p align="center">
+<p align="center">
 <img src="screenshots/focus.png"> &nbsp; <img src="screenshots/countdown.png">
 </p>
- -->
+
 ## Usage
 
 ```swift
@@ -30,12 +30,11 @@ view.takeCameraSnapshot( {
 view.removeCameraBackground()
 ```
 
-**Important:** Remeber to add `NSCameraUsageDescription` to your `Info.plist`.
 
 ## Requirements
 
 - iOS 8.0+
-- Xcode 7.3
+- Xcode 8.0+
 
 ## Installation
 
@@ -46,3 +45,4 @@ view.removeCameraBackground()
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE.txt
+[build-image]: https://img.shields.io/travis/USER/REPO.svg
