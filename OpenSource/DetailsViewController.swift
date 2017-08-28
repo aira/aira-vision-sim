@@ -18,8 +18,7 @@ class DetailsViewController: UIViewController {
     var currentDisease:Disease?
     override func viewDidLoad() {
         super.viewDidLoad()
-        navBar.topItem?.title = currentDisease?.getDiseaseTitle
-        // Do any additional setup after loading the view.
+        self.title = currentDisease?.getDiseaseTitle
         descriptionText.text = currentDisease?.getDescriptionText
         areasAffected.text = currentDisease?.getAreasAffectedText
         peopleAffectedText.text = currentDisease?.getPeopleText
@@ -30,11 +29,7 @@ class DetailsViewController: UIViewController {
         }
         sourcesText.text = "Sources: " + (currentDisease?.getSourcesText)!
     }
-    // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         if segue.identifier == "camView" {
             if let destination = segue.destination as? CameraViewController {
                 destination.currentDisease = currentDisease

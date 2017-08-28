@@ -34,6 +34,114 @@ class CameraViewController: UIViewController {
         self.performSegue(withIdentifier: "details", sender: nil)
     }
     @IBOutlet var sliderControl: UISlider!
+    @IBAction func SegmentedControl(_ sender: Any) {
+        switch diseaseTitle {
+            case "Glaucoma":
+                switch segmentedControl.selectedSegmentIndex
+                {
+                case 0:
+                    overlayView.image = UIImage(named: "glaucoma_early")
+                case 1:
+                    overlayView.image = UIImage(named: "glaucoma_middle")
+                case 2:
+                    overlayView.image = UIImage(named: "glaucoma_late")
+                default:
+                    overlayView.image = UIImage(named: "glaucoma_early")
+                }
+            case "Macular Degeneration":
+                switch segmentedControl.selectedSegmentIndex
+                {
+                    case 0:
+                        overlayView.image = UIImage(named: "mac_early")
+                    case 1:
+                        overlayView.image = UIImage(named: "mac_middle")
+                    case 2:
+                        overlayView.image = UIImage(named: "mac_late")
+                    default:
+                        overlayView.image = UIImage(named: "mac_early")
+                        break
+                }
+            case "Retinal Detachment":
+                switch segmentedControl.selectedSegmentIndex
+                {
+                    case 0:
+                        overlayView.image = UIImage(named: "rd")
+                    case 1:
+                        overlayView.image = UIImage(named: "retinal_detachment1")
+                    case 2:
+                        overlayView.image = UIImage(named: "retinal_detachment2")
+                    default:
+                        overlayView.image = UIImage(named: "rd")
+                        break
+                }
+            case "Stargardt Disease":
+                switch segmentedControl.selectedSegmentIndex
+                {
+                case 0:
+                    overlayView.image = UIImage(named: "mac_early")
+                case 1:
+                    overlayView.image = UIImage(named: "mac_middle")
+                case 2:
+                    overlayView.image = UIImage(named: "mac_late")
+                default:
+                    overlayView.image = UIImage(named: "mac_early")
+                    break
+                }
+            
+            case "Leber Hereditary Optic Neuropathy (LHON)":
+                switch segmentedControl.selectedSegmentIndex
+                {
+                    case 0:
+                        overlayView.image = UIImage(named: "mac_early")
+                    case 1:
+                        overlayView.image = UIImage(named: "mac_middle")
+                    case 2:
+                        overlayView.image = UIImage(named: "mac_late")
+                    default:
+                        overlayView.image = UIImage(named: "mac_early")
+                    break
+                }
+            case "Diabetic Retinopathy":
+                switch segmentedControl.selectedSegmentIndex
+                {
+                case 0:
+                    overlayView.image = UIImage(named: "DR")
+                case 1:
+                    overlayView.image = UIImage(named: "rd2")
+                default:
+                    overlayView.image = UIImage(named: "DR")
+                    break
+                }
+            case "Retinitis Pigmentosa(RP)":
+                switch segmentedControl.selectedSegmentIndex
+                {
+                case 0:
+                    overlayView.image = UIImage(named: "glaucoma_early")
+                case 1:
+                    overlayView.image = UIImage(named: "glaucoma_middle")
+                case 2:
+                    overlayView.image = UIImage(named: "glaucoma_late")
+                default:
+                    overlayView.image = UIImage(named: "glaucoma_early")
+                }
+            case "Bardet Biedle Syndrome":
+                switch segmentedControl.selectedSegmentIndex
+                {
+                case 0:
+                    overlayView.image = UIImage(named: "glaucoma_early")
+                case 1:
+                    overlayView.image = UIImage(named: "glaucoma_middle")
+                case 2:
+                    overlayView.image = UIImage(named: "glaucoma_late")
+                default:
+                    overlayView.image = UIImage(named: "glaucoma_early")
+                }
+            default:
+                break;
+        }
+        
+    }
+    @IBOutlet var segmentedControl: UISegmentedControl!
     @IBAction func sliderControl(_ sender: Any) {
         blurView.alpha = CGFloat(sliderControl.value)
     }
@@ -43,64 +151,80 @@ class CameraViewController: UIViewController {
         cameraView.addCameraBackground(.back, buttonMargins: view.layoutMargins)
 //        cameraView.addCameraBackground()
         blurView.effect = blur
-        navBar.topItem?.title = currentDisease?.getDiseaseTitle
+        //navBar.topItem?.title = currentDisease?.getDiseaseTitle
+        self.title = currentDisease?.getDiseaseTitle
         diseaseTitle = (currentDisease?.getDiseaseTitle)!
         applyFilter()
     }
     func applyFilter() {
         switch diseaseTitle {
             case "Glaucoma":
-                overlayView.image = UIImage(named: "Glaucoma")
+                print(diseaseTitle)
+                overlayView.image = UIImage(named: "glaucoma_early")
                 sliderControl.isHidden = true
             case "Retinal Detachment":
                 overlayView.image = UIImage(named: "rd")
                 sliderControl.isHidden = true
+                segmentedControl.setTitle("Ex 1", forSegmentAt: 0)
+                segmentedControl.setTitle("Ex 2", forSegmentAt: 1)
+                segmentedControl.setTitle("Ex 3", forSegmentAt: 2)
             case "Optic Neuritis(Neuropathy)":
-                blurView.alpha = 0.1
+                blurView.alpha = 0.5
                 blurView.frame = cameraView.bounds
                 cameraView.addSubview(blurView)
+                segmentedControl.isHidden = true
             case "Cataracts":
-                blurView.alpha = 0.1
+                blurView.alpha = 0.5
                 blurView.frame = cameraView.bounds
                 cameraView.addSubview(blurView)
+                segmentedControl.isHidden = true
             case "Corneal Dystrophy":
-                blurView.alpha = 0.1
+                blurView.alpha = 0.5
                 blurView.frame = cameraView.bounds
                 cameraView.addSubview(blurView)
+                segmentedControl.isHidden = true
             case "Neuromyelitis Optica (Devic's Disease)":
                 overlayView.image = UIImage(named: "Devic")
                 sliderControl.isHidden = true
             case "Retinitis Pigmentosa(RP)":
-                overlayView.image = UIImage(named: "RP")
+                overlayView.image = UIImage(named: "glaucoma_early")
                 sliderControl.isHidden = true
             case "Macular Degeneration":
-                overlayView.image = UIImage(named: "macular_degen")
+                overlayView.image = UIImage(named: "mac_early")
                 blurView.frame = cameraView.bounds
-                blurView.alpha = 0.1
+                blurView.alpha = 0.5
                 cameraView.addSubview(blurView)
+                sliderControl.isHidden = true
             case "Diabetic Retinopathy":
                 overlayView.image = UIImage(named: "DR")
                 sliderControl.isHidden = true
+                segmentedControl.removeSegment(at: 2, animated: false)
+                segmentedControl.setTitle("Ex 1", forSegmentAt: 0)
+                segmentedControl.setTitle("Ex 2", forSegmentAt: 1)
             case "Leber's Congenital Amaurosis":
                 blurView.frame = cameraView.bounds
-                blurView.alpha = 0.1
+                blurView.alpha = 0.5
                 cameraView.addSubview(blurView)
+                segmentedControl.isHidden = true
             case "Leber Hereditary Optic Neuropathy (LHON)":
-                overlayView.image = UIImage(named: "MacularDegen")
+                overlayView.image = UIImage(named: "mac_early")
                 blurView.frame = cameraView.bounds
-                blurView.alpha = 0.1
+                blurView.alpha = 0.5
                 cameraView.addSubview(blurView)
+                sliderControl.isHidden = true
             case "Stargardt Disease":
-                overlayView.image = UIImage(named: "MacularDegen")
+                overlayView.image = UIImage(named: "mac_early")
                 blurView.frame = cameraView.bounds
-                blurView.alpha = 0.1
+                blurView.alpha = 0.5
                 cameraView.addSubview(blurView)
+                sliderControl.isHidden = true
             case "Optic Nerve Hypoplasia":
                 blurView.frame = cameraView.bounds
-                blurView.alpha = 0.1
+                blurView.alpha = 0.5
                 cameraView.addSubview(blurView)
+                segmentedControl.isHidden = true
             case "Bardet Biedle Syndrome":
-                overlayView.image = UIImage(named: "RP")
+                overlayView.image = UIImage(named: "glaucoma_early")
                 sliderControl.isHidden = true
             default:
                 print("None")
