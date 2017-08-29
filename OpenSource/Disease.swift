@@ -25,7 +25,7 @@ class Disease {
     var inheritedBool:Bool = false
     var sourcesText:String = ""
     var keyFactsText:String = ""
-    init( title:String,  description:String,areasAffected:String,people:String,_ inherited:Bool, sources:String, keyFacts:String)
+    init(title:String, description:String, areasAffected:String, people:String, inherited:Bool, sources:String, keyFacts:String)
     {
         diseaseTitle = title;
         descriptionText = description;
@@ -34,7 +34,6 @@ class Disease {
         inheritedBool = inherited;
         sourcesText = sources;
         keyFactsText = keyFacts
-        
     }
     var getDiseaseTitle:String {
         return diseaseTitle;
