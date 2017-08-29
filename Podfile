@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'OpenSource' do
+target ‘AiraVisionSim’ do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
@@ -10,12 +10,12 @@ target 'OpenSource' do
   pod 'Fabric'
   pod 'Crashlytics'
 
-  target 'OpenSourceTests' do
+  target 'AiraVisionSimTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'OpenSourceUITests' do
+  target 'AiraVisionSimUITests' do
     inherit! :search_paths
     # Pods for testing
   end

@@ -1,0 +1,29 @@
+PODS:
+  - CameraBackground (1.2):
+    - CameraBackground/Resources (= 1.2)
+    - MiniLayout
+    - MultiToggleButton
+  - CameraBackground/Resources (1.2):
+    - MiniLayout
+    - MultiToggleButton
+  - Crashlytics (3.8.5):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.12)
+  - MiniLayout (1.1.0)
+  - MultiToggleButton (1.5.2)
+
+DEPENDENCIES:
+  - CameraBackground
+  - Crashlytics
+  - Fabric
+
+SPEC CHECKSUMS:
+  CameraBackground: fdcab5e7f23b387ab0ee654b8aa6f0d18694d162
+  Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
+  Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
+  MiniLayout: 7664ed112a89d954e6ccb83b6ef5dc122fb77852
+  MultiToggleButton: 181887a5daca85992892ba70f07a8d3829207e69
+
+PODFILE CHECKSUM: 60355723a77ce0b0f79be2ebadd362ab1ca8ab00
+
+COCOAPODS: 1.2.1
