@@ -37,7 +37,7 @@ view.removeCameraBackground()
 
 Download the repository and click run.
 
-##License 
+## License 
 
 Copyright 2017 Aira Tech Inc.
 
@@ -53,7 +53,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-##Creator
+## Creator
 
 Haasith Sanka
 https://github.com/Hsanka6
