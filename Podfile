@@ -5,7 +5,7 @@ target ‘AiraVisionSim’ do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for OpenSource
+  # Pods for AiraVisionSim
   pod 'CameraBackground'
   pod 'Fabric'
   pod 'Crashlytics'
