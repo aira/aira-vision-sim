@@ -10,21 +10,26 @@ Here's more about us and our mission https://aira.io/
 
 ## Usage
 
+Use the Disease model to add new diseases.
+
+* Name of disease (title) 
+* Description (description)
+* Areas of the eye affected (areasAffected)
+* Inherited or not (inherited)
+* Sources for the information (sources)
+* Core Aspects of the disease (keyFacts)
+
 ```swift
-view.addCameraBackground()
-// ...
-view.takeCameraSnapshot( {
-      // animate snapshot capture
-      self.view.alpha = 0
-      UIView.animate(withDuration: 1) { self.view.alpha = 1 }
-  },
-  completion: { (capturedImage, error) -> () in
-      self.view.freeCameraSnapshot() // unfreeze image
-      // ... handle capturedImage and error
-  }
-)
-// ...
-view.removeCameraBackground()
+init( title:String,  description:String,areasAffected:String,people:String,_ inherited:Bool, sources:String, keyFacts:String)
+{
+diseaseTitle = title;
+descriptionText = description;
+areasAffectedText = areasAffected;
+peopleText = people;
+inheritedBool = inherited;
+sourcesText = sources;
+keyFactsText = keyFacts
+}
 ```
 
 
