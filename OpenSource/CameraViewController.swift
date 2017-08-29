@@ -119,7 +119,7 @@ class CameraViewController: UIViewController {
                     default:
                         overlayView.image = UIImage(named: "DR")
                 }
-            case "Retinitis Pigmentosa(RP)":
+            case "Retinitis Pigmentosa (RP)":
                 switch segmentedControl.selectedSegmentIndex
                 {
                     case 0:
@@ -147,13 +147,13 @@ class CameraViewController: UIViewController {
                 switch segmentedControl.selectedSegmentIndex
                 {
                     case 0:
-                        overlayView.image = UIImage(named: "glaucoma_early")
+                        overlayView.image = UIImage(named: "mac_early")
                     case 1:
-                        overlayView.image = UIImage(named: "glaucoma_middle")
+                        overlayView.image = UIImage(named: "mac_middle")
                     case 2:
                         overlayView.image = UIImage(named: "Devic")
                     default:
-                        overlayView.image = UIImage(named: "glaucoma_early")
+                        overlayView.image = UIImage(named: "mac_early")
             }
             default:
                 break;
@@ -196,7 +196,7 @@ class CameraViewController: UIViewController {
                 segmentedControl.setTitle("Ex 1", forSegmentAt: 0)
                 segmentedControl.setTitle("Ex 2", forSegmentAt: 1)
                 segmentedControl.setTitle("Ex 3", forSegmentAt: 2)
-            case "Optic Neuritis(Neuropathy)":
+            case "Optic Neuritis (Neuropathy)":
                 blurView.alpha = 0.5
                 blurView.frame = cameraView.bounds
                 cameraView.addSubview(blurView)
@@ -214,7 +214,7 @@ class CameraViewController: UIViewController {
             case "Neuromyelitis Optica (Devic's Disease)":
                 overlayView.image = UIImage(named: "mac_early")
                 sliderControl.isHidden = true
-            case "Retinitis Pigmentosa(RP)":
+            case "Retinitis Pigmentosa (RP)":
                 overlayView.image = UIImage(named: "glaucoma_early")
                 sliderControl.isHidden = true
             case "Macular Degeneration":
