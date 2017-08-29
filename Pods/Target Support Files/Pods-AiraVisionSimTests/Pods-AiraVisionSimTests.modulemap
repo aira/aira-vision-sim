@@ -1,6 +1,0 @@
-framework module Pods_AiraVisionSimTests {
-  umbrella header "Pods-AiraVisionSimTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
