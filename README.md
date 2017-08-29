@@ -20,16 +20,7 @@ Use the Disease model to add new diseases.
 * Core Aspects of the disease (keyFacts)
 
 ```swift
-init( title:String,  description:String,areasAffected:String,people:String,_ inherited:Bool, sources:String, keyFacts:String)
-{
-diseaseTitle = title;
-descriptionText = description;
-areasAffectedText = areasAffected;
-peopleText = people;
-inheritedBool = inherited;
-sourcesText = sources;
-keyFactsText = keyFacts
-}
+init( title:String,  description:String,areasAffected:String,people:String,_ inherited:Bool, sources:String, keyFacts:String) {}
 ```
 
 
