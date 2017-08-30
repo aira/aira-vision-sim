@@ -16,8 +16,7 @@ public extension UIView {
     public func toggleCameraBackground(_ position: AVCaptureDevicePosition = .unspecified, buttonMargins: UIEdgeInsets = .zero) {
         if let _ = cameraLayer {
             removeCameraBackground()
-        }
-        else {
+        } else {
             addCameraBackground(position, buttonMargins: buttonMargins)
         }
     }
@@ -26,15 +25,13 @@ public extension UIView {
         removeCameraControls()
         cameraLayer?.removeFromSuperlayer()
     }
-
     /// Add camera background layer
     public func addCameraBackground(_ position: AVCaptureDevicePosition = .unspecified, buttonMargins: UIEdgeInsets = .zero) {
         let session = AVCaptureSession.stillCameraCaptureSession(position)
         let cameraLayer = CameraLayer(session: session)
         if session == nil {
             cameraLayer?.backgroundColor = UIColor.black.cgColor
-        }
-        else {
+        } else {
             cameraLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
         }
 
@@ -52,7 +49,7 @@ public extension UIView {
             performWithTimer(timerInterval) {
                 onTime?()
                 cameraLayer.connection.isEnabled = false // to freeze image
-                cameraLayer.captureStillImage( {(capturedImage, error) in
+                cameraLayer.captureStillImage({(capturedImage, error) in
                     cameraLayer.session.stopRunning()
                     completion?(capturedImage, error)
                 })
@@ -71,9 +68,7 @@ public extension UIView {
     public var cameraLayer: AVCaptureVideoPreviewLayer? {
         return layer.sublayerNamed(theCameraLayerName) as? AVCaptureVideoPreviewLayer
     }
-    
     // MARK: - Private Camera Controls
-    
     private var device: AVCaptureDevice? {
         return (cameraLayer?.session?.inputs?.first as? AVCaptureDeviceInput)?.device
     }
@@ -90,7 +85,8 @@ public extension UIView {
 //        constrain(panel, at: .right, diff: -margins.right)
 //        
 //        // timer button
-//        let timerButton = MultiToggleButton(image: bundeledCameraTemplateImage("camera-timer"), states: ["", "3s", "10s"], colors: [nil, UIColor.cameraOnColor(), UIColor.cameraOnColor(), UIColor.cameraOnColor()])
+//        let timerButton = MultiToggleButton(image: bundeledCameraTemplateImage("camera-timer"), states: ["", "3s", "10s"], colors: 
+//    [nil, UIColor.cameraOnColor(), UIColor.cameraOnColor(), UIColor.cameraOnColor()])
 //        panel.addTaggedSubview(timerButton, tag: theTimerButtonTag, constrain: .top, .centerX, .bottom) // .bottom constraint sets panel height
 //        
 //        // flash button
@@ -112,7 +108,6 @@ public extension UIView {
 //        device?.changeMonitoring(true)
 //        NotificationCenter.default.addObserver(self, selector: #selector(removeFocusBox), name: NSNotification.Name.AVCaptureDeviceSubjectAreaDidChange, object: nil)
 //    }
-    
     public func removeCameraControls() {
         // remove focus and zoom gestures
         gestureRecognizerOfType(CameraPinchGestureRecognizer.self)?.removeFromView()
@@ -124,7 +119,6 @@ public extension UIView {
         viewWithTag(thePanelViewTag)?.removeFromSuperview()
         viewWithTag(theCountdownLabelTag)?.removeFromSuperview()
     }
-    
 //    private func updateFlashButtonState() {
 //        if let device = device {
 //            if let flashButton = viewWithTag(theFlashButtonTag) as? MultiToggleButton {
@@ -154,7 +148,6 @@ public extension UIView {
             removeFocusBox()
         }
     }
-    
     // MARK: - Action: Toggle Flash Mode
 
     func setFlashMode(_ rawValue: NSInteger) {
@@ -166,7 +159,6 @@ public extension UIView {
             }
         }
     }
-    
     // MARK: - Action: Toggle Timer
 
     var timerInterval: Int {
@@ -175,19 +167,15 @@ public extension UIView {
         }
         return 0
     }
-    
     private func performWithTimer(_ interval: Int, block: @escaping () -> ()) {
         if interval > 0 {
             let countdownLabel = CoundownLabel(seconds: interval, action: block)
             addTaggedSubview(countdownLabel, tag: theCountdownLabelTag, constrain: .centerX, .centerY)
-        }
-        else {
+        } else {
             block()
         }
     }
-    
     // MARK: - Action: Pinch to Zoom
-
     func pinchToZoom(_ sender: UIPinchGestureRecognizer) {
         struct Static {
             static var initialZoom: CGFloat = 1
@@ -199,7 +187,6 @@ public extension UIView {
             device.changeZoomFactor(sender.scale * Static.initialZoom)
         }
     }
-    
     // MARK: - Action: Tap to Focus
 
     func tapToFocus(_ sender: UITapGestureRecognizer) {
@@ -209,23 +196,19 @@ public extension UIView {
             if !device.isFocusPointOfInterestSupported && !device.isExposurePointOfInterestSupported {
                 return
             }
-            
             let interestPoint = CGPoint(x: (focusPoint.y - bounds.minY) / bounds.height, y: 1 - (focusPoint.x - bounds.minX) / bounds.width)
             device.changeInterestPoint(interestPoint)
             showFocusBox(focusPoint)
-        }
-        else if UIDevice.isSimulator {
+        } else if UIDevice.isSimulator {
             showFocusBox(focusPoint)
         }
     }
-    
     private func showFocusBox(_ center: CGPoint) {
         cameraLayer?.sublayerNamed(theFocusLayerName)?.removeFromSuperlayer()
         let focusLayer = FocusBoxLayer(center: center)
         focusLayer.name = theFocusLayerName
         cameraLayer?.addSublayer(focusLayer)
     }
-    
     func removeFocusBox() { // not private because it is a selector for AVCaptureDeviceSubjectAreaDidChangeNotification
         cameraLayer?.sublayerNamed(theFocusLayerName)?.removeFromSuperlayer()
         if let device = device {
@@ -263,7 +246,6 @@ class CameraLayer: AVCaptureVideoPreviewLayer {
             self?.updateCameraFrameAndOrientation()
         }
     }
-
     func updateCameraFrameAndOrientation() {
         guard let superlayer = superlayer else {return}
         frame = superlayer.bounds
@@ -273,9 +255,7 @@ class CameraLayer: AVCaptureVideoPreviewLayer {
         connection.videoOrientation = appOrientation
     }
 }
-
 // MARK: - Private Constants
-
 private let thePanelViewTag = 98765
 private let theSwitchButtonTag = thePanelViewTag + 1
 private let theFlashButtonTag = thePanelViewTag + 2
@@ -320,7 +300,6 @@ extension UIView {
         }
         return nil
     }
-    
     func addTaggedSubview(_ subview: UIView, tag: Int, constrain: NSLayoutAttribute...) {
         subview.tag = tag
         subview.translatesAutoresizingMaskIntoConstraints = false
@@ -337,7 +316,7 @@ extension UIGestureRecognizer {
 
 extension CALayer {
     func sublayerNamed(_ name: String) -> CALayer? {
-        guard let sublayers = sublayers else  {return nil}
+        guard let sublayers = sublayers else {return nil}
         for s in sublayers {
             if let sName = s.name {
                 if sName == name {
@@ -402,8 +381,7 @@ class CoundownLabel: UILabel {
             remainingSeconds -= 1
             dispatchWorkItem = DispatchWorkItem {[weak self] in self?.countdown()}
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: dispatchWorkItem!)
-        }
-        else {
+        } else {
             removeFromSuperview()
             action()
         }
@@ -419,16 +397,13 @@ class FocusBoxLayer : CAShapeLayer {
         path = UIBezierPath(focusBoxAround: center, big: true).cgPath
         strokeColor = UIColor.cameraOnColor().cgColor
         fillColor = UIColor.clear.cgColor
-        
         DispatchQueue.main.async {
             self.path = UIBezierPath(focusBoxAround: center, big: false).cgPath
         }
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.opacity = 0.5
         }
     }
-    
     override func action(forKey event: String) -> CAAction? { // animate changes to 'path'
         switch event {
         case "path":
@@ -436,7 +411,6 @@ class FocusBoxLayer : CAShapeLayer {
             animation.duration = CATransaction.animationDuration()
             animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
             return animation
-            
         default:
             return super.action(forKey: event)
         }
@@ -462,19 +436,18 @@ extension UIBezierPath {
 
 // MARK: - Identifiable Gesture Recognizers
 
-class CameraTapGestureRecognizer : UITapGestureRecognizer, UIGestureRecognizerDelegate {
+class CameraTapGestureRecognizer: UITapGestureRecognizer, UIGestureRecognizerDelegate {
     override init(target: Any?, action: Selector?) {
         super.init(target: target, action: action)
         cancelsTouchesInView = false
         delegate = self
     }
-    
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         return !(touch.view is UIControl)
     }
 }
 
-private class CameraPinchGestureRecognizer : UIPinchGestureRecognizer {
+private class CameraPinchGestureRecognizer: UIPinchGestureRecognizer {
 }
 
 // MARK: - Private AV Extensions
@@ -504,15 +477,12 @@ private extension AVCaptureSession {
 
         do {
             let deviceInput = try AVCaptureDeviceInput(device: device)
-            if canAddInput(deviceInput) { addInput(deviceInput) }
-            else { NSLog("Can't add camera input for position \(position.rawValue)") }
-        }
-        catch {
+            if canAddInput(deviceInput) { addInput(deviceInput) } else { NSLog("Can't add camera input for position \(position.rawValue)") }
+        } catch {
             NSLog("Can't access camera")
         }
     }
 }
-
 private extension AVCaptureDevicePosition {
     func opposite() -> AVCaptureDevicePosition {
         switch self {
@@ -535,13 +505,11 @@ private extension AVCaptureDevice {
         }
         return defaultDevice(withMediaType: AVMediaTypeVideo)
     }
-    
     func changeFlashMode(_ mode: AVCaptureFlashMode) {
         performWithLock() {
             self.flashMode = mode
         }
     }
-    
     func changeInterestPoint(_ point: CGPoint) {
         performWithLock() {
             if self.isFocusPointOfInterestSupported {
@@ -554,20 +522,17 @@ private extension AVCaptureDevice {
             }
         }
     }
-    
     func changeMonitoring(_ on: Bool) {
         performWithLock() {
             self.isSubjectAreaChangeMonitoringEnabled = on
         }
     }
-    
     func changeZoomFactor(_ zoomFactor: CGFloat) {
         let effectiveZoomFactor = min( max(zoomFactor, 1), 4)
         performWithLock() {
             self.videoZoomFactor = effectiveZoomFactor
         }
     }
-    
     func performWithLock(_ block: ()->()) {
         do {
             try lockForConfiguration()
@@ -578,44 +543,36 @@ private extension AVCaptureDevice {
         }
     }
 }
-
 private extension AVCaptureVideoPreviewLayer {
     func captureStillImage( _ completion: ((_ capturedImage: UIImage?, _ error: NSError?) -> ())? ) {
-
         let errorCompletion = {(code: Int, description: String) -> () in
             completion?(nil, NSError(domain: "AVCaptureError", code: code, userInfo: [NSLocalizedDescriptionKey: description]))
             return
         }
-
         if let imageOutput = imageOutput {
             if let videoConnection = imageOutput.videoConnection {
                 imageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(imageBuffer, error) in
                     if let error = error {
                         completion?(nil, error as NSError?)
-                    }
-                    else {
+                    } else {
                         let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageBuffer)
                         if var image = UIImage(data: imageData!) {
                             if (self.session?.inputs?.first as? AVCaptureDeviceInput)?.device.position == .front { // flip front camera
                                 image = UIImage(cgImage: image.cgImage!, scale: image.scale, orientation: .rightMirrored)
                             }
                             completion?(image, nil)
-                        }
-                        else {
+                        } else {
                             errorCompletion(1, "Can't create UIImage from captured image data")
                         }
                     }
-                });
-            }
-            else {
+                })
+            } else {
                 errorCompletion(2, "Can't find video AVCaptureConnection")
             }
-        }
-        else {
+        } else {
             errorCompletion(3, "Can't find AVCaptureStillImageOutput")
         }
     }
-
     var imageOutput: AVCaptureStillImageOutput? {
         if let session = session {
             for videoOutput in session.outputs {
@@ -627,11 +584,10 @@ private extension AVCaptureVideoPreviewLayer {
         return nil
     }
 }
-
 private extension AVCaptureOutput {
     var videoConnection: AVCaptureConnection? {
-        for connection in connections as! [AVCaptureConnection] {
-            for port in connection.inputPorts as! [AVCaptureInputPort] {
+        for connection in (connections as? [AVCaptureConnection])! {
+            for port in (connection.inputPorts as? [AVCaptureInputPort])! {
                 if port.mediaType == AVMediaTypeVideo {
                     return connection
                 }

@@ -19,7 +19,8 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     @IBOutlet var label: UILabel!
-    var Disease:Disease!
+    var disease: Disease!
+    @IBOutlet var detail: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

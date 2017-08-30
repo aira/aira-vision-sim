@@ -8,6 +8,7 @@ target ‘AiraVisionSim’ do
   # Pods for AiraVisionSim
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'SwiftLint'
 
   target 'AiraVisionSimTests' do
     inherit! :search_paths

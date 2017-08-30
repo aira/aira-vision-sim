@@ -19,16 +19,13 @@ import UIKit
 import Crashlytics
 
 class DetailsViewController: UIViewController {
-    @IBOutlet var navBar: UINavigationBar!
     @IBOutlet var descriptionText: UILabel!
-    @IBOutlet var areasAffected: UILabel!
     @IBOutlet var peopleAffectedText: UILabel!
     @IBOutlet var inheritedText: UILabel!
     @IBOutlet var sourcesText: UILabel!
     @IBOutlet var keyFactsText: UILabel!
-    
-    
-    var currentDisease:Disease?
+    @IBOutlet var areasAffectedText: UILabel!
+    var currentDisease: Disease?
     override func viewDidLoad() {
         super.viewDidLoad()
         if currentDisease?.getDiseaseTitle == "Leber Hereditary Optic Neuropathy (LHON)" {
@@ -39,7 +36,7 @@ class DetailsViewController: UIViewController {
             self.title = currentDisease?.getDiseaseTitle
         }
         descriptionText.text = currentDisease?.getDescriptionText
-        areasAffected.text = currentDisease?.getAreasAffectedText
+        areasAffectedText.text = currentDisease?.getAreasAffectedText
         peopleAffectedText.text = currentDisease?.getPeopleText
         keyFactsText.text = currentDisease?.getKeyFacts
         if currentDisease?.getInheritedBool == false {
@@ -48,7 +45,6 @@ class DetailsViewController: UIViewController {
             inheritedText.text = "Yes"
         }
         sourcesText.text = "Sources: " + (currentDisease?.getSourcesText)!
-       
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "camView" {

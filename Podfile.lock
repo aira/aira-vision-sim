@@ -2,15 +2,18 @@ PODS:
   - Crashlytics (3.8.5):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.12)
+  - SwiftLint (0.21.0)
 
 DEPENDENCIES:
   - Crashlytics
   - Fabric
+  - SwiftLint
 
 SPEC CHECKSUMS:
   Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
   Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
+  SwiftLint: 6de8b2d15f43c482bdec2953b8cfd696faa876e8
 
-PODFILE CHECKSUM: ae1d6c55074165ce0b7616f8397cc0dd895b7f45
+PODFILE CHECKSUM: 60c197fb0c2d1a583e71d48a8c3643e4562bb99a
 
 COCOAPODS: 1.2.1
