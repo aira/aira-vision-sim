@@ -6,7 +6,6 @@ target ‘AiraVisionSim’ do
   use_frameworks!
 
   # Pods for AiraVisionSim
-  pod 'CameraBackground'
   pod 'Fabric'
   pod 'Crashlytics'
 

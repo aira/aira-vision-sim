@@ -28,7 +28,6 @@ struct AppUtility {
     }
 }
 import UIKit
-import CameraBackground
 class CameraViewController: UIViewController {
     @IBOutlet var overlayView: UIImageView!
     @IBOutlet var cameraView: UIView!
