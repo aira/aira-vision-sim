@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		24FA936D4633F6B2A6652D57 /* Pods_AiraVisionSim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15E331A1DF736F7CE07C4E9 /* Pods_AiraVisionSim.framework */; };
 		654A487BD916F7D8E6ECEFFC /* Pods_AiraVisionSimTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E7EDD1AD9B75E40F4C833F /* Pods_AiraVisionSimTests.framework */; };
+		701F53261F563A98002049B4 /* UIView+CameraBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701F53251F563A98002049B4 /* UIView+CameraBackground.swift */; };
 		706251191F311785009D6B0A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706251181F311785009D6B0A /* CameraViewController.swift */; };
 		706D5C041F54917B001504D1 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D5C031F54917B001504D1 /* AboutViewController.swift */; };
 		706D9B641F33E8BD000A01A4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D9B631F33E8BD000A01A4 /* DetailsViewController.swift */; };
+		706EF0911F563792009931E7 /* Sources in Resources */ = {isa = PBXBuildFile; fileRef = 706EF0901F563792009931E7 /* Sources */; };
 		70953DBE1F42F25B00ABCC12 /* Disease.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70953DBD1F42F25B00ABCC12 /* Disease.swift */; };
 		70953DC01F42F7F100ABCC12 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70953DBF1F42F7F100ABCC12 /* TableViewCell.swift */; };
 		70C1B3801F30FACF00E80A7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C1B37F1F30FACF00E80A7F /* AppDelegate.swift */; };
@@ -49,9 +51,11 @@
 		5103FAEC9153E501CBAF55A1 /* Pods-OpenSource.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenSource.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenSource/Pods-OpenSource.debug.xcconfig"; sourceTree = "<group>"; };
 		5823126F3D3E1C46BAA30CD1 /* Pods_AiraVisionSimUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AiraVisionSimUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C3171E22100B6312BBBDBC8 /* Pods-AiraVisionSimTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiraVisionSimTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AiraVisionSimTests/Pods-AiraVisionSimTests.debug.xcconfig"; sourceTree = "<group>"; };
+		701F53251F563A98002049B4 /* UIView+CameraBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CameraBackground.swift"; sourceTree = "<group>"; };
 		706251181F311785009D6B0A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		706D5C031F54917B001504D1 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		706D9B631F33E8BD000A01A4 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		706EF0901F563792009931E7 /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sources; sourceTree = "<group>"; };
 		70953DBD1F42F25B00ABCC12 /* Disease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disease.swift; sourceTree = "<group>"; };
 		70953DBF1F42F7F100ABCC12 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		70C1B37C1F30FACF00E80A7F /* AiraVisionSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiraVisionSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,7 +154,9 @@
 		70C1B37E1F30FACF00E80A7F /* AiraVisionSim */ = {
 			isa = PBXGroup;
 			children = (
+				706EF0901F563792009931E7 /* Sources */,
 				70C1B37F1F30FACF00E80A7F /* AppDelegate.swift */,
+				701F53251F563A98002049B4 /* UIView+CameraBackground.swift */,
 				70C1B3811F30FACF00E80A7F /* HomeViewController.swift */,
 				706D9B631F33E8BD000A01A4 /* DetailsViewController.swift */,
 				706251181F311785009D6B0A /* CameraViewController.swift */,
@@ -323,6 +329,7 @@
 				70C1B38A1F30FACF00E80A7F /* LaunchScreen.storyboard in Resources */,
 				70C1B3871F30FACF00E80A7F /* Assets.xcassets in Resources */,
 				70C1B3851F30FACF00E80A7F /* Main.storyboard in Resources */,
+				706EF0911F563792009931E7 /* Sources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +510,7 @@
 				70C1B3801F30FACF00E80A7F /* AppDelegate.swift in Sources */,
 				706D5C041F54917B001504D1 /* AboutViewController.swift in Sources */,
 				70953DC01F42F7F100ABCC12 /* TableViewCell.swift in Sources */,
+				701F53261F563A98002049B4 /* UIView+CameraBackground.swift in Sources */,
 				706251191F311785009D6B0A /* CameraViewController.swift in Sources */,
 				706D9B641F33E8BD000A01A4 /* DetailsViewController.swift in Sources */,
 			);
