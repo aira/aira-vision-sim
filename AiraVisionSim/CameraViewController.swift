@@ -42,10 +42,10 @@ class CameraViewController: UIViewController {
         self.performSegue(withIdentifier: "details", sender: nil)
     }
     @IBOutlet var sliderControl: UISlider!
-    
+
     @IBOutlet var segmentedControl: UISegmentedControl!
-   
-    
+
+
     @IBAction func segmentedControl(_ sender: Any) {
         switch diseaseTitle {
         case "Glaucoma":

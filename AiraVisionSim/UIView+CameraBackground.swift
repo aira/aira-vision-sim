@@ -14,7 +14,7 @@ public extension UIView {
 
     /// Change the current camera background layer, e.g. when a user taps a camera on/off button.
     public func toggleCameraBackground(_ position: AVCaptureDevicePosition = .unspecified, buttonMargins: UIEdgeInsets = .zero) {
-        if let _ = cameraLayer {
+        if cameraLayer != nil {
             removeCameraBackground()
         } else {
             addCameraBackground(position, buttonMargins: buttonMargins)
@@ -43,7 +43,7 @@ public extension UIView {
     /// - Parameters:
     ///   - onTime: action to perform when the timer completes countdown. E.g., make a click sound and/or show a flash.
     ///   - completion: handle captured image.
-    public func takeCameraSnapshot(_ onTime: (() -> Void)?, completion: ((_ capturedImage: UIImage?, _ error: NSError?) -> ())? = nil) {
+    public func takeCameraSnapshot(_ onTime: (() -> Void)?, completion: ((_ capturedImage: UIImage?, _ error: NSError?) -> Void)? = nil) {
         if let cameraLayer = cameraLayer {
             viewWithTag(theCountdownLabelTag)?.removeFromSuperview()
             performWithTimer(timerInterval) {
@@ -167,7 +167,7 @@ public extension UIView {
         }
         return 0
     }
-    private func performWithTimer(_ interval: Int, block: @escaping () -> ()) {
+    private func performWithTimer(_ interval: Int, block: @escaping () -> Void) {
         if interval > 0 {
             let countdownLabel = CoundownLabel(seconds: interval, action: block)
             addTaggedSubview(countdownLabel, tag: theCountdownLabelTag, constrain: .centerX, .centerY)
@@ -177,14 +177,13 @@ public extension UIView {
     }
     // MARK: - Action: Pinch to Zoom
     func pinchToZoom(_ sender: UIPinchGestureRecognizer) {
-        struct Static {
-            static var initialZoom: CGFloat = 1
-        }
+        var initialZoom: CGFloat = 1
+
         if let device = device {
             if sender.state == .began {
-                Static.initialZoom = device.videoZoomFactor
+                initialZoom = device.videoZoomFactor
             }
-            device.changeZoomFactor(sender.scale * Static.initialZoom)
+            device.changeZoomFactor(sender.scale * initialZoom)
         }
     }
     // MARK: - Action: Tap to Focus
@@ -237,16 +236,15 @@ class CameraLayer: AVCaptureVideoPreviewLayer {
         setup()
     }
 
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
 
     private func setup() {
-        NotificationCenter.default.addObserver(forName: .UIDeviceOrientationDidChange, object: nil, queue: nil) { [weak self] (notification) in
-            self?.updateCameraFrameAndOrientation()
-        }
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updateCameraFrameAndOrientation),
+                                               name: .UIDeviceOrientationDidChange,
+                                               object: nil)
     }
-    func updateCameraFrameAndOrientation() {
+
+    @objc func updateCameraFrameAndOrientation() {
         guard let superlayer = superlayer else {return}
         frame = superlayer.bounds
         guard let connection = connection, connection.isVideoOrientationSupported,
@@ -349,10 +347,10 @@ extension UIButton {
 
 class CoundownLabel: UILabel {
     var remainingSeconds: Int = 0
-    let action: ()->Void
+    let action: () -> Void
     private var dispatchWorkItem: DispatchWorkItem?
 
-    init(seconds: Int, action: @escaping ()->Void) {
+    init(seconds: Int, action: @escaping () -> Void) {
         self.action = action
         remainingSeconds = seconds
         super.init(frame: .zero)
@@ -391,7 +389,7 @@ class CoundownLabel: UILabel {
 
 // MARK: - Focus Box
 
-class FocusBoxLayer : CAShapeLayer {
+class FocusBoxLayer: CAShapeLayer {
     convenience init(center: CGPoint) {
         self.init()
         path = UIBezierPath(focusBoxAround: center, big: true).cgPath
@@ -497,21 +495,19 @@ private extension AVCaptureDevice {
     class func deviceWithPosition(_ position: AVCaptureDevicePosition) -> AVCaptureDevice? {
         if position != .unspecified {
             guard let devices = devices(withMediaType: AVMediaTypeVideo) as? [AVCaptureDevice] else {return nil}
-            for device in devices {
-                if device.position == position {
+            for device in devices where device.position == position {
                     return device
-                }
             }
         }
         return defaultDevice(withMediaType: AVMediaTypeVideo)
     }
     func changeFlashMode(_ mode: AVCaptureFlashMode) {
-        performWithLock() {
+        performWithLock {
             self.flashMode = mode
         }
     }
     func changeInterestPoint(_ point: CGPoint) {
-        performWithLock() {
+        performWithLock {
             if self.isFocusPointOfInterestSupported {
                 self.focusPointOfInterest = point
                 self.focusMode = .continuousAutoFocus
@@ -522,18 +518,18 @@ private extension AVCaptureDevice {
             }
         }
     }
-    func changeMonitoring(_ on: Bool) {
-        performWithLock() {
-            self.isSubjectAreaChangeMonitoringEnabled = on
+    func changeMonitoring(_ isOn: Bool) {
+        performWithLock {
+            self.isSubjectAreaChangeMonitoringEnabled = isOn
         }
     }
     func changeZoomFactor(_ zoomFactor: CGFloat) {
         let effectiveZoomFactor = min( max(zoomFactor, 1), 4)
-        performWithLock() {
+        performWithLock {
             self.videoZoomFactor = effectiveZoomFactor
         }
     }
-    func performWithLock(_ block: ()->()) {
+    func performWithLock(_ block: () -> Void) {
         do {
             try lockForConfiguration()
             block()
@@ -544,8 +540,8 @@ private extension AVCaptureDevice {
     }
 }
 private extension AVCaptureVideoPreviewLayer {
-    func captureStillImage( _ completion: ((_ capturedImage: UIImage?, _ error: NSError?) -> ())? ) {
-        let errorCompletion = {(code: Int, description: String) -> () in
+    func captureStillImage( _ completion: ((_ capturedImage: UIImage?, _ error: NSError?) -> Void)? ) {
+        let errorCompletion = {(code: Int, description: String) -> Void in
             completion?(nil, NSError(domain: "AVCaptureError", code: code, userInfo: [NSLocalizedDescriptionKey: description]))
             return
         }
@@ -587,10 +583,9 @@ private extension AVCaptureVideoPreviewLayer {
 private extension AVCaptureOutput {
     var videoConnection: AVCaptureConnection? {
         for connection in (connections as? [AVCaptureConnection])! {
-            for port in (connection.inputPorts as? [AVCaptureInputPort])! {
-                if port.mediaType == AVMediaTypeVideo {
+            for port in (connection.inputPorts as? [AVCaptureInputPort])!
+                where port.mediaType == AVMediaTypeVideo {
                     return connection
-                }
             }
         }
         return nil
