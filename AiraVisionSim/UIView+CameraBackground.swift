@@ -8,6 +8,8 @@
 
 import AVFoundation
 import UIKit
+import MultiToggleButton
+import MiniLayout
 
 public extension UIView {
     // MARK: - Public Camera Interface
@@ -72,42 +74,40 @@ public extension UIView {
     private var device: AVCaptureDevice? {
         return (cameraLayer?.session?.inputs?.first as? AVCaptureDeviceInput)?.device
     }
-//
-//    private func addCameraControls(_ margins: UIEdgeInsets = .zero) {
-//        // buttons panel
-//        let panel = UIView()
-//        panel.tag = thePanelViewTag
-//        panel.tintColor = .white
-//        addSubview(panel)
-//        panel.translatesAutoresizingMaskIntoConstraints = false
-//        constrain(panel, at: .top, diff: margins.top)
-//        constrain(panel, at: .left, diff: margins.left)
-//        constrain(panel, at: .right, diff: -margins.right)
-//        
-//        // timer button
-//        let timerButton = MultiToggleButton(image: bundeledCameraTemplateImage("camera-timer"), states: ["", "3s", "10s"], colors: 
-//    [nil, UIColor.cameraOnColor(), UIColor.cameraOnColor(), UIColor.cameraOnColor()])
-//        panel.addTaggedSubview(timerButton, tag: theTimerButtonTag, constrain: .top, .centerX, .bottom) // .bottom constraint sets panel height
-//        
-//        // flash button
-//        let flashButton = MultiToggleButton(image: bundeledCameraTemplateImage("camera-flash"), states: ["Off", "On", "Auto"], colors: [nil, UIColor.cameraOnColor()]) { (sender) -> () in
-//            self.setFlashMode(sender.currentStateIndex)
-//        }
-//        panel.addTaggedSubview(flashButton, tag: theFlashButtonTag, constrain: .top, .left)
-//        updateFlashButtonState()
-//        
-//        // switch camera button
-//        if AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo).count > 1 || UIDevice.isSimulator {
-//            let cameraButton = UIButton.buttonWithImage(bundeledCameraTemplateImage("camera-switch")!, target: self, action: #selector(switchCamera(_:)))
-//            panel.addTaggedSubview(cameraButton, tag: theSwitchButtonTag, constrain: .top, .right)
-//        }
-//        
-//        // focus and zoom gestures - uses gesture subclass to make it identifiable when removing camera
-//        addGestureRecognizer( CameraPinchGestureRecognizer(target: self, action: #selector(pinchToZoom(_:))) )
-//        addGestureRecognizer( CameraTapGestureRecognizer(target: self, action: #selector(tapToFocus(_:))) )
-//        device?.changeMonitoring(true)
-//        NotificationCenter.default.addObserver(self, selector: #selector(removeFocusBox), name: NSNotification.Name.AVCaptureDeviceSubjectAreaDidChange, object: nil)
-//    }
+
+    private func addCameraControls(_ margins: UIEdgeInsets = .zero) {
+        // buttons panel
+        let panel = UIView()
+        panel.tag = thePanelViewTag
+        panel.tintColor = .white
+        addSubview(panel)
+        panel.translatesAutoresizingMaskIntoConstraints = false
+        constrain(panel, at: .top, diff: margins.top)
+        constrain(panel, at: .left, diff: margins.left)
+        constrain(panel, at: .right, diff: -margins.right)
+        // timer button
+        let timerButton = MultiToggleButton(image: bundeledCameraTemplateImage("camera-timer"), states: ["", "3s", "10s"], colors: [nil, UIColor.cameraOnColor(), UIColor.cameraOnColor(), UIColor.cameraOnColor()])
+        panel.addTaggedSubview(timerButton, tag: theTimerButtonTag, constrain: .top, .centerX, .bottom) // .bottom constraint sets panel height
+        timerButton.isHidden = true
+        // flash button
+        let flashButton = MultiToggleButton(image: bundeledCameraTemplateImage("camera-flash"), states: ["Off", "On", "Auto"], colors: [nil, UIColor.cameraOnColor()]) { (sender) -> Void in
+            self.setFlashMode(sender.currentStateIndex)
+        }
+        panel.addTaggedSubview(flashButton, tag: theFlashButtonTag, constrain: .top, .left)
+        flashButton.isHidden = true
+        updateFlashButtonState()
+        // switch camera button
+        if AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo).count > 1 || UIDevice.isSimulator {
+            let cameraButton = UIButton.buttonWithImage(bundeledCameraTemplateImage("camera-switch")!, target: self, action: #selector(switchCamera(_:)))
+            panel.addTaggedSubview(cameraButton, tag: theSwitchButtonTag, constrain: .top, .right)
+            cameraButton.isHidden = true
+        }
+        // focus and zoom gestures - uses gesture subclass to make it identifiable when removing camera
+        addGestureRecognizer( CameraPinchGestureRecognizer(target: self, action: #selector(pinchToZoom(_:))) )
+        addGestureRecognizer( CameraTapGestureRecognizer(target: self, action: #selector(tapToFocus(_:))) )
+        device?.changeMonitoring(true)
+        NotificationCenter.default.addObserver(self, selector: #selector(removeFocusBox), name: NSNotification.Name.AVCaptureDeviceSubjectAreaDidChange, object: nil)
+    }
     public func removeCameraControls() {
         // remove focus and zoom gestures
         gestureRecognizerOfType(CameraPinchGestureRecognizer.self)?.removeFromView()
@@ -119,20 +119,18 @@ public extension UIView {
         viewWithTag(thePanelViewTag)?.removeFromSuperview()
         viewWithTag(theCountdownLabelTag)?.removeFromSuperview()
     }
-//    private func updateFlashButtonState() {
-//        if let device = device {
-//            if let flashButton = viewWithTag(theFlashButtonTag) as? MultiToggleButton {
-//                if device.hasFlash {
-//                    flashButton.isHidden = false
-//                    flashButton.currentStateIndex = device.flashMode.rawValue
-//                }
-//                else {
-//                    flashButton.isHidden = true
-//                }
-//            }
-//        }
-//    }
-//    
+    private func updateFlashButtonState() {
+        if let device = device {
+            if let flashButton = viewWithTag(theFlashButtonTag) as? MultiToggleButton {
+                if device.hasFlash {
+                    flashButton.isHidden = false
+                    flashButton.currentStateIndex = device.flashMode.rawValue
+                } else {
+                    flashButton.isHidden = true
+                }
+            }
+        }
+    }
     // MARK: - Action: Switch Front/Back Camera
 
     func switchCamera(_ sender: UIButton) {

@@ -22,12 +22,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var diseaseTitle = ""
     var currentDisease: Disease?
     var diseaseArray = [Disease]()
+    var indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         diseaseArraySetup()
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        indicator.center = view.center
         // Do any additional setup after loading the view, typically from a nib.
     }
     func diseaseArraySetup() {
@@ -62,10 +64,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return diseaseArray.count
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indicator.startAnimating()
+        view.addSubview(indicator)
         let cell = tableView.cellForRow(at: indexPath) as? TableViewCell
         diseaseTitle = (cell?.label.text)!
         tableView.deselectRow(at: indexPath, animated: true)
         currentDisease = cell?.disease
+        indicator.stopAnimating()
         self.performSegue(withIdentifier: "cameraView", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

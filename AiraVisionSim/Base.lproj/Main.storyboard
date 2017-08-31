@@ -13,14 +13,8 @@
         <array key="SanFranciscoDisplay-Regular.otf">
             <string>SanFranciscoDisplay-Regular</string>
         </array>
-        <array key="SanFranciscoDisplay-Semibold.otf">
-            <string>SanFranciscoDisplay-Semibold</string>
-        </array>
         <array key="SanFranciscoText-Regular.otf">
             <string>SanFranciscoText-Regular</string>
-        </array>
-        <array key="SanFranciscoText-Semibold.otf">
-            <string>SanFranciscoText-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -69,7 +63,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8NJ-9G-bbV" id="zzF-if-0Lp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igd-kg-g4I">
@@ -84,7 +78,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow_angle" translatesAutoresizingMaskIntoConstraints="NO" id="Z8O-8d-fAk">
-                                                    <rect key="frame" x="350" y="26" width="15" height="23"/>
+                                                    <rect key="frame" x="350" y="34.5" width="15" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="G7H-Fm-HQ7"/>
                                                         <constraint firstAttribute="height" constant="23" id="ywV-gA-JUK"/>
@@ -95,11 +89,11 @@
                                                 <constraint firstItem="igd-kg-g4I" firstAttribute="top" secondItem="zzF-if-0Lp" secondAttribute="top" constant="8" id="7SO-eg-N7V"/>
                                                 <constraint firstItem="fyI-vT-d1W" firstAttribute="leading" secondItem="zzF-if-0Lp" secondAttribute="leading" constant="20" id="A3N-1R-1Fg"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="igd-kg-g4I" secondAttribute="trailing" constant="18" id="Jaw-rk-8hx"/>
+                                                <constraint firstItem="Z8O-8d-fAk" firstAttribute="centerY" secondItem="zzF-if-0Lp" secondAttribute="centerY" id="Qps-GA-kU8"/>
                                                 <constraint firstItem="Z8O-8d-fAk" firstAttribute="leading" secondItem="fyI-vT-d1W" secondAttribute="trailing" constant="15" id="awb-yI-a1y"/>
                                                 <constraint firstItem="fyI-vT-d1W" firstAttribute="top" secondItem="igd-kg-g4I" secondAttribute="bottom" constant="2" id="chN-vD-NfT"/>
                                                 <constraint firstAttribute="trailing" secondItem="Z8O-8d-fAk" secondAttribute="trailing" constant="10" id="rM5-Ne-hLE"/>
                                                 <constraint firstItem="igd-kg-g4I" firstAttribute="leading" secondItem="zzF-if-0Lp" secondAttribute="leading" constant="20" id="sfY-HO-2BI"/>
-                                                <constraint firstItem="Z8O-8d-fAk" firstAttribute="top" secondItem="zzF-if-0Lp" secondAttribute="topMargin" constant="18" id="z4b-fc-qcm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -238,18 +232,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9Ys-kS-uL4" firstAttribute="leading" secondItem="8i4-wF-qEg" secondAttribute="leading" constant="10" id="0fB-9f-Amg"/>
-                            <constraint firstItem="7k2-yO-4Q6" firstAttribute="top" secondItem="7GX-YX-nYi" secondAttribute="bottom" id="1hG-z8-tpP"/>
                             <constraint firstItem="gx5-Ul-aw6" firstAttribute="top" secondItem="9Ys-kS-uL4" secondAttribute="bottom" constant="8" id="6uS-HA-rCZ"/>
+                            <constraint firstAttribute="trailing" secondItem="7k2-yO-4Q6" secondAttribute="trailing" id="8sT-xB-igh"/>
                             <constraint firstAttribute="trailing" secondItem="UjK-gV-9Vg" secondAttribute="trailing" id="F9Z-fq-ih4"/>
                             <constraint firstItem="qTi-CM-iOX" firstAttribute="leading" secondItem="8i4-wF-qEg" secondAttribute="leading" constant="10" id="P7f-1n-Anl"/>
                             <constraint firstItem="gx5-Ul-aw6" firstAttribute="top" secondItem="UjK-gV-9Vg" secondAttribute="bottom" id="PaO-gJ-iXb"/>
-                            <constraint firstItem="7k2-yO-4Q6" firstAttribute="leading" secondItem="8i4-wF-qEg" secondAttribute="leading" id="RPZ-QB-b39"/>
-                            <constraint firstItem="gx5-Ul-aw6" firstAttribute="top" secondItem="7k2-yO-4Q6" secondAttribute="bottom" id="T85-I2-m3x"/>
                             <constraint firstItem="UjK-gV-9Vg" firstAttribute="top" secondItem="7GX-YX-nYi" secondAttribute="bottom" id="ZSC-yv-irb"/>
                             <constraint firstItem="gx5-Ul-aw6" firstAttribute="top" secondItem="qTi-CM-iOX" secondAttribute="bottom" constant="8" id="cfH-tx-QLz"/>
                             <constraint firstAttribute="trailing" secondItem="qTi-CM-iOX" secondAttribute="trailing" constant="10" id="nGf-SL-x0Z"/>
+                            <constraint firstItem="7k2-yO-4Q6" firstAttribute="leading" secondItem="8i4-wF-qEg" secondAttribute="leading" id="uMJ-YC-oYE"/>
                             <constraint firstItem="UjK-gV-9Vg" firstAttribute="leading" secondItem="8i4-wF-qEg" secondAttribute="leading" id="v9q-Im-x2R"/>
-                            <constraint firstAttribute="trailing" secondItem="7k2-yO-4Q6" secondAttribute="trailing" id="wlm-tY-ICI"/>
+                            <constraint firstItem="7k2-yO-4Q6" firstAttribute="top" secondItem="8i4-wF-qEg" secondAttribute="top" id="y4l-FE-fB2"/>
+                            <constraint firstItem="gx5-Ul-aw6" firstAttribute="top" secondItem="7k2-yO-4Q6" secondAttribute="bottom" id="yCk-yd-mBh"/>
                             <constraint firstAttribute="trailing" secondItem="9Ys-kS-uL4" secondAttribute="trailing" constant="10" id="zGe-OL-hQu"/>
                         </constraints>
                     </view>
@@ -270,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6a-D9-L8B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-198" y="104"/>
+            <point key="canvasLocation" x="-199.19999999999999" y="103.89805097451276"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="8iS-L7-wtq">
@@ -289,11 +283,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="QTj-2P-YRR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SanFranciscoText-Semibold" family="San Francisco Text" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5S-KD-SoO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5S-KD-SoO">
                                 <rect key="frame" x="26" y="43" width="329" height="19"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -304,7 +298,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="z9t-zH-ffd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Semibold" family="San Francisco Display" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -315,11 +309,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of People Affected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukB-oc-fNQ">
-                                <rect key="frame" x="26" y="135" width="243.5" height="21"/>
+                                <rect key="frame" x="26" y="135" width="243" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Odg-iy-ZB6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SanFranciscoText-Semibold" family="San Francisco Text" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -330,11 +324,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inherited?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eb-qK-T3a">
-                                <rect key="frame" x="26" y="193" width="89.5" height="21"/>
+                                <rect key="frame" x="26" y="193" width="89" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="UJU-mR-ISK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SanFranciscoText-Semibold" family="San Francisco Text" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -361,11 +355,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="PZP-JP-j22"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SanFranciscoText-Semibold" family="San Francisco Text" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtF-vR-Rzy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtF-vR-Rzy">
                                 <rect key="frame" x="26" y="279.5" width="329" height="20"/>
                                 <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -423,8 +417,8 @@
     </scenes>
     <resources>
         <image name="aira_sim" width="137" height="83"/>
-        <image name="amanda" width="375" height="138"/>
-        <image name="information_button" width="25" height="26"/>
+        <image name="amanda" width="1080" height="413"/>
+        <image name="information_button" width="19" height="20"/>
         <image name="right_arrow_angle" width="10" height="15"/>
     </resources>
 </document>

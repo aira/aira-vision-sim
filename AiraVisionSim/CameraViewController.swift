@@ -158,8 +158,8 @@ class CameraViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        cameraView.addCameraBackground(.back, buttonMargins: view.layoutMargins)
-//        cameraView.addCameraBackground()
+        //cameraView.addCameraBackground(.back, buttonMargins: view.layoutMargins)
+        cameraView.addCameraBackground()
         blurView.effect = blur
         //navBar.topItem?.title = currentDisease?.getDiseaseTitle
         if currentDisease?.getDiseaseTitle == "Leber Hereditary Optic Neuropathy (LHON)" {
@@ -169,7 +169,7 @@ class CameraViewController: UIViewController {
         } else {
             self.title = currentDisease?.getDiseaseTitle
         }
-        cameraView.removeCameraControls()
+        //cameraView.removeCameraControls()
         segmentedControl.tintColor = hexStringToUIColor(hex: "#21BECE")
         segmentedControl.backgroundColor = UIColor.white
         segmentedControl.layer.cornerRadius = 5
