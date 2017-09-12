@@ -283,7 +283,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "Haasith Sanka";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					70C1B37B1F30FACF00E80A7F = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -688,6 +688,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.aira.visionsimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -702,6 +703,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.aira.visionsimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
