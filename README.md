@@ -3,6 +3,7 @@
 [![Swift Version][swift-image]][swift-url]
 [![License][license-image]][license-url]
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Itunes App Store](https://img.shields.io/itunes/v/1276859786.svg)](https://itunes.apple.com/us/app/aira-vision-sim/id1276859786?mt=8)
 
 Aira vision simulator helps people understand what kind of blindnesses exist. It simulates the blindness using the camera, so you can get a feel for how blind people see. We also provide details about each disease.
 
