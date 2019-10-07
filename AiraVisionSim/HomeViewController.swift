@@ -22,7 +22,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var diseaseTitle = ""
     var currentDisease: Disease?
     var diseaseArray = [Disease]()
-    var indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+    var indicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self

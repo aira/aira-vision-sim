@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		24FA936D4633F6B2A6652D57 /* Pods_AiraVisionSim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15E331A1DF736F7CE07C4E9 /* Pods_AiraVisionSim.framework */; };
-		654A487BD916F7D8E6ECEFFC /* Pods_AiraVisionSimTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E7EDD1AD9B75E40F4C833F /* Pods_AiraVisionSimTests.framework */; };
 		701F53261F563A98002049B4 /* UIView+CameraBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701F53251F563A98002049B4 /* UIView+CameraBackground.swift */; };
 		706251191F311785009D6B0A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706251181F311785009D6B0A /* CameraViewController.swift */; };
 		706D5C041F54917B001504D1 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706D5C031F54917B001504D1 /* AboutViewController.swift */; };
@@ -21,29 +20,7 @@
 		70C1B3851F30FACF00E80A7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C1B3831F30FACF00E80A7F /* Main.storyboard */; };
 		70C1B3871F30FACF00E80A7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70C1B3861F30FACF00E80A7F /* Assets.xcassets */; };
 		70C1B38A1F30FACF00E80A7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C1B3881F30FACF00E80A7F /* LaunchScreen.storyboard */; };
-		70E9FCD41F560C420044066F /* AiraVisionSimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9FCD31F560C420044066F /* AiraVisionSimTests.swift */; };
-		70E9FCD61F560C5F0044066F /* AiraVisionSimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9FCD51F560C5F0044066F /* AiraVisionSimUITests.swift */; };
-		839703C13D590E9D587D3204 /* Pods_OpenSourceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F54ED59CEADEE2ABE6F94914 /* Pods_OpenSourceUITests.framework */; };
-		9A2F4D9ECD5C68CEAB75C28B /* Pods_AiraVisionSimUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5823126F3D3E1C46BAA30CD1 /* Pods_AiraVisionSimUITests.framework */; };
-		BA11E9479BE26286D9BDA02C /* Pods_OpenSourceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEAE308891E99080BF0929E1 /* Pods_OpenSourceTests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		70C1B3911F30FACF00E80A7F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 70C1B3741F30FACF00E80A7F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 70C1B37B1F30FACF00E80A7F;
-			remoteInfo = OpenSource;
-		};
-		70C1B39C1F30FACF00E80A7F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 70C1B3741F30FACF00E80A7F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 70C1B37B1F30FACF00E80A7F;
-			remoteInfo = OpenSource;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		05A730C80877B180C2DDFD6F /* Pods-AiraVisionSim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiraVisionSim.release.xcconfig"; path = "Pods/Target Support Files/Pods-AiraVisionSim/Pods-AiraVisionSim.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,12 +42,6 @@
 		70C1B3861F30FACF00E80A7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70C1B3891F30FACF00E80A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70C1B38B1F30FACF00E80A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70C1B3901F30FACF00E80A7F /* AiraVisionSimTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiraVisionSimTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		70C1B3961F30FACF00E80A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70C1B39B1F30FACF00E80A7F /* AiraVisionSimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiraVisionSimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		70C1B3A11F30FACF00E80A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70E9FCD31F560C420044066F /* AiraVisionSimTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraVisionSimTests.swift; sourceTree = "<group>"; };
-		70E9FCD51F560C5F0044066F /* AiraVisionSimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiraVisionSimUITests.swift; sourceTree = "<group>"; };
 		7382A49659920CD46B4EDB29 /* Pods-OpenSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenSource.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenSource/Pods-OpenSource.release.xcconfig"; sourceTree = "<group>"; };
 		7F07F66B5A79AF5D05C55367 /* Pods-AiraVisionSimUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiraVisionSimUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AiraVisionSimUITests/Pods-AiraVisionSimUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9977670D60DEDD06C1ED3F79 /* Pods-AiraVisionSimUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiraVisionSimUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AiraVisionSimUITests/Pods-AiraVisionSimUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,24 +66,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		70C1B38D1F30FACF00E80A7F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BA11E9479BE26286D9BDA02C /* Pods_OpenSourceTests.framework in Frameworks */,
-				654A487BD916F7D8E6ECEFFC /* Pods_AiraVisionSimTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		70C1B3981F30FACF00E80A7F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				839703C13D590E9D587D3204 /* Pods_OpenSourceUITests.framework in Frameworks */,
-				9A2F4D9ECD5C68CEAB75C28B /* Pods_AiraVisionSimUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -133,8 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				70C1B37E1F30FACF00E80A7F /* AiraVisionSim */,
-				70C1B3931F30FACF00E80A7F /* AiraVisionSimTests */,
-				70C1B39E1F30FACF00E80A7F /* AiraVisionSimUITests */,
 				70C1B37D1F30FACF00E80A7F /* Products */,
 				DF6CC0E192E78C676AA1111B /* Pods */,
 				3AE877CA006B2FDE338E0129 /* Frameworks */,
@@ -145,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				70C1B37C1F30FACF00E80A7F /* AiraVisionSim.app */,
-				70C1B3901F30FACF00E80A7F /* AiraVisionSimTests.xctest */,
-				70C1B39B1F30FACF00E80A7F /* AiraVisionSimUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,24 +118,6 @@
 				706D5C031F54917B001504D1 /* AboutViewController.swift */,
 			);
 			path = AiraVisionSim;
-			sourceTree = "<group>";
-		};
-		70C1B3931F30FACF00E80A7F /* AiraVisionSimTests */ = {
-			isa = PBXGroup;
-			children = (
-				70E9FCD31F560C420044066F /* AiraVisionSimTests.swift */,
-				70C1B3961F30FACF00E80A7F /* Info.plist */,
-			);
-			path = AiraVisionSimTests;
-			sourceTree = "<group>";
-		};
-		70C1B39E1F30FACF00E80A7F /* AiraVisionSimUITests */ = {
-			isa = PBXGroup;
-			children = (
-				70E9FCD51F560C5F0044066F /* AiraVisionSimUITests.swift */,
-				70C1B3A11F30FACF00E80A7F /* Info.plist */,
-			);
-			path = AiraVisionSimUITests;
 			sourceTree = "<group>";
 		};
 		DF6CC0E192E78C676AA1111B /* Pods */ = {
@@ -220,7 +151,6 @@
 				70C1B3791F30FACF00E80A7F /* Frameworks */,
 				70C1B37A1F30FACF00E80A7F /* Resources */,
 				3E58CBFD43C2244B00065AD0 /* [CP] Embed Pods Frameworks */,
-				50283969B6C1B49FDC90542B /* [CP] Copy Pods Resources */,
 				709A5C221F54CB3600A76BB1 /* ShellScript */,
 				70E937401F57370800A18F8F /* ShellScript */,
 			);
@@ -233,48 +163,6 @@
 			productReference = 70C1B37C1F30FACF00E80A7F /* AiraVisionSim.app */;
 			productType = "com.apple.product-type.application";
 		};
-		70C1B38F1F30FACF00E80A7F /* AiraVisionSimTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 70C1B3A71F30FACF00E80A7F /* Build configuration list for PBXNativeTarget "AiraVisionSimTests" */;
-			buildPhases = (
-				59289902783666E0B6BDEF26 /* [CP] Check Pods Manifest.lock */,
-				70C1B38C1F30FACF00E80A7F /* Sources */,
-				70C1B38D1F30FACF00E80A7F /* Frameworks */,
-				70C1B38E1F30FACF00E80A7F /* Resources */,
-				B8DA970D1580F04A623DABD8 /* [CP] Embed Pods Frameworks */,
-				878018085E64E72608BA7F55 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				70C1B3921F30FACF00E80A7F /* PBXTargetDependency */,
-			);
-			name = AiraVisionSimTests;
-			productName = OpenSourceTests;
-			productReference = 70C1B3901F30FACF00E80A7F /* AiraVisionSimTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		70C1B39A1F30FACF00E80A7F /* AiraVisionSimUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 70C1B3AA1F30FACF00E80A7F /* Build configuration list for PBXNativeTarget "AiraVisionSimUITests" */;
-			buildPhases = (
-				1D86E67027CE0B24217F4BD3 /* [CP] Check Pods Manifest.lock */,
-				70C1B3971F30FACF00E80A7F /* Sources */,
-				70C1B3981F30FACF00E80A7F /* Frameworks */,
-				70C1B3991F30FACF00E80A7F /* Resources */,
-				ADCA3B70E8D440240BBE3DAA /* [CP] Embed Pods Frameworks */,
-				5CD95D70F8BE7DA200AB5AD1 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				70C1B39D1F30FACF00E80A7F /* PBXTargetDependency */,
-			);
-			name = AiraVisionSimUITests;
-			productName = OpenSourceUITests;
-			productReference = 70C1B39B1F30FACF00E80A7F /* AiraVisionSimUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -282,23 +170,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					70C1B37B1F30FACF00E80A7F = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = F3VXHD352U;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
-					};
-					70C1B38F1F30FACF00E80A7F = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 70C1B37B1F30FACF00E80A7F;
-					};
-					70C1B39A1F30FACF00E80A7F = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 70C1B37B1F30FACF00E80A7F;
 					};
 				};
 			};
@@ -316,8 +195,6 @@
 			projectRoot = "";
 			targets = (
 				70C1B37B1F30FACF00E80A7F /* AiraVisionSim */,
-				70C1B38F1F30FACF00E80A7F /* AiraVisionSimTests */,
-				70C1B39A1F30FACF00E80A7F /* AiraVisionSimUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -334,51 +211,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		70C1B38E1F30FACF00E80A7F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		70C1B3991F30FACF00E80A7F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1D86E67027CE0B24217F4BD3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		1E56AF98C13E52D8C1128316 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AiraVisionSim-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3E58CBFD43C2244B00065AD0 /* [CP] Embed Pods Frameworks */ = {
@@ -387,58 +238,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AiraVisionSim/Pods-AiraVisionSim-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MiniLayout/MiniLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/MultiToggleButton/MultiToggleButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MiniLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MultiToggleButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AiraVisionSim/Pods-AiraVisionSim-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		50283969B6C1B49FDC90542B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AiraVisionSim/Pods-AiraVisionSim-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		59289902783666E0B6BDEF26 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5CD95D70F8BE7DA200AB5AD1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AiraVisionSimUITests/Pods-AiraVisionSimUITests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AiraVisionSim/Pods-AiraVisionSim-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		709A5C221F54CB3600A76BB1 /* ShellScript */ = {
@@ -467,51 +278,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		878018085E64E72608BA7F55 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AiraVisionSimTests/Pods-AiraVisionSimTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ADCA3B70E8D440240BBE3DAA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AiraVisionSimUITests/Pods-AiraVisionSimUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B8DA970D1580F04A623DABD8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AiraVisionSimTests/Pods-AiraVisionSimTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -530,36 +296,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		70C1B38C1F30FACF00E80A7F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				70E9FCD41F560C420044066F /* AiraVisionSimTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		70C1B3971F30FACF00E80A7F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				70E9FCD61F560C5F0044066F /* AiraVisionSimUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		70C1B3921F30FACF00E80A7F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 70C1B37B1F30FACF00E80A7F /* AiraVisionSim */;
-			targetProxy = 70C1B3911F30FACF00E80A7F /* PBXContainerItemProxy */;
-		};
-		70C1B39D1F30FACF00E80A7F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 70C1B37B1F30FACF00E80A7F /* AiraVisionSim */;
-			targetProxy = 70C1B39C1F30FACF00E80A7F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		70C1B3831F30FACF00E80A7F /* Main.storyboard */ = {
@@ -591,15 +328,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -642,15 +387,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -687,7 +440,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.aira.visionsimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -702,66 +456,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.aira.visionsimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		70C1B3A81F30FACF00E80A7F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C3171E22100B6312BBBDBC8 /* Pods-AiraVisionSimTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = OpenSourceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.samp.OpenSourceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AiraVisionSim.app/AiraVisionSim";
-			};
-			name = Debug;
-		};
-		70C1B3A91F30FACF00E80A7F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEAD56F314C37FCCBF7CE58D /* Pods-AiraVisionSimTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = OpenSourceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.samp.OpenSourceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AiraVisionSim.app/AiraVisionSim";
-			};
-			name = Release;
-		};
-		70C1B3AB1F30FACF00E80A7F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F07F66B5A79AF5D05C55367 /* Pods-AiraVisionSimUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = OpenSourceUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.samp.OpenSourceUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = OpenSource;
-			};
-			name = Debug;
-		};
-		70C1B3AC1F30FACF00E80A7F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9977670D60DEDD06C1ED3F79 /* Pods-AiraVisionSimUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = OpenSourceUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.samp.OpenSourceUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = OpenSource;
 			};
 			name = Release;
 		};
@@ -782,24 +479,6 @@
 			buildConfigurations = (
 				70C1B3A51F30FACF00E80A7F /* Debug */,
 				70C1B3A61F30FACF00E80A7F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		70C1B3A71F30FACF00E80A7F /* Build configuration list for PBXNativeTarget "AiraVisionSimTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				70C1B3A81F30FACF00E80A7F /* Debug */,
-				70C1B3A91F30FACF00E80A7F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		70C1B3AA1F30FACF00E80A7F /* Build configuration list for PBXNativeTarget "AiraVisionSimUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				70C1B3AB1F30FACF00E80A7F /* Debug */,
-				70C1B3AC1F30FACF00E80A7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

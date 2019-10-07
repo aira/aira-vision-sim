@@ -33,7 +33,7 @@ class CameraViewController: UIViewController {
     @IBOutlet var cameraView: UIView!
     var diseaseTitle: String = ""
     var currentDisease: Disease?
-    var blur = UIBlurEffect(style: UIBlurEffectStyle.light)
+    var blur = UIBlurEffect(style: UIBlurEffect.Style.light)
     var blurView = UIVisualEffectView()
     @IBAction func back(_ sender: Any) {
         self.performSegue(withIdentifier: "diseaseList", sender: nil)
@@ -275,7 +275,7 @@ extension UIViewController {
         if cString.hasPrefix("#") {
             cString.remove(at: cString.startIndex)
         }
-        if (cString.characters.count) != 6 {
+        if (cString.count) != 6 {
             return UIColor.gray
         }
         var rgbValue: UInt32 = 0
