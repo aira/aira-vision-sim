@@ -1,10 +1,10 @@
 PODS:
-  - Crashlytics (3.8.5):
-    - Fabric (~> 1.6.3)
-  - Fabric (1.6.12)
-  - MiniLayout (1.1.0)
-  - MultiToggleButton (1.5.2)
-  - SwiftLint (0.21.0)
+  - Crashlytics (3.14.0):
+    - Fabric (~> 1.10.2)
+  - Fabric (1.10.2)
+  - MiniLayout (1.4.0)
+  - MultiToggleButton (1.8.2)
+  - SwiftLint (0.35.0)
 
 DEPENDENCIES:
   - Crashlytics
@@ -13,13 +13,21 @@ DEPENDENCIES:
   - MultiToggleButton
   - SwiftLint
 
+SPEC REPOS:
+  trunk:
+    - Crashlytics
+    - Fabric
+    - MiniLayout
+    - MultiToggleButton
+    - SwiftLint
+
 SPEC CHECKSUMS:
-  Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
-  Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
-  MiniLayout: 7664ed112a89d954e6ccb83b6ef5dc122fb77852
-  MultiToggleButton: 181887a5daca85992892ba70f07a8d3829207e69
-  SwiftLint: 6de8b2d15f43c482bdec2953b8cfd696faa876e8
+  Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
+  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
+  MiniLayout: e35331ce9ab50a4111c3f91deca158834f86d9e7
+  MultiToggleButton: d02f5deaaa431b83f1f465e95a09e41fb3b40b51
+  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
 
-PODFILE CHECKSUM: 65729f9f2dc81571cf30fd5c8f8a18a1328fea93
+PODFILE CHECKSUM: bcca463898825f2194a2238d0e6ace05c8c591ee
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.8.1
