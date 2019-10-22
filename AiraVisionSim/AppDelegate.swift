@@ -18,6 +18,7 @@
 import UIKit
 import Fabric
 import Crashlytics
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,8 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return self.orientationLock
     }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        Fabric.with([Crashlytics.self])
-        UIApplication.shared.statusBarStyle = .lightContent
+        FirebaseApp.configure()
+//        Fabric.with([Crashlytics.self])
+//        UIApplication.shared.statusBarStyle = .lightContent
         // Override point for customization after application launch.
         return true
     }

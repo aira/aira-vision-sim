@@ -20,6 +20,7 @@
 		70C1B3851F30FACF00E80A7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C1B3831F30FACF00E80A7F /* Main.storyboard */; };
 		70C1B3871F30FACF00E80A7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70C1B3861F30FACF00E80A7F /* Assets.xcassets */; };
 		70C1B38A1F30FACF00E80A7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70C1B3881F30FACF00E80A7F /* LaunchScreen.storyboard */; };
+		73A8FF0F235E7E63000DA80A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73A8FF0E235E7E63000DA80A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		70C1B3891F30FACF00E80A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70C1B38B1F30FACF00E80A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7382A49659920CD46B4EDB29 /* Pods-OpenSource.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenSource.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenSource/Pods-OpenSource.release.xcconfig"; sourceTree = "<group>"; };
+		73A8FF0E235E7E63000DA80A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F07F66B5A79AF5D05C55367 /* Pods-AiraVisionSimUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiraVisionSimUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AiraVisionSimUITests/Pods-AiraVisionSimUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9977670D60DEDD06C1ED3F79 /* Pods-AiraVisionSimUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiraVisionSimUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AiraVisionSimUITests/Pods-AiraVisionSimUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A15E331A1DF736F7CE07C4E9 /* Pods_AiraVisionSim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AiraVisionSim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 		70C1B37E1F30FACF00E80A7F /* AiraVisionSim */ = {
 			isa = PBXGroup;
 			children = (
+				73A8FF0E235E7E63000DA80A /* GoogleService-Info.plist */,
 				706EF0901F563792009931E7 /* Sources */,
 				70C1B37F1F30FACF00E80A7F /* AppDelegate.swift */,
 				701F53251F563A98002049B4 /* UIView+CameraBackground.swift */,
@@ -186,6 +189,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -206,6 +210,7 @@
 			files = (
 				70C1B38A1F30FACF00E80A7F /* LaunchScreen.storyboard in Resources */,
 				70C1B3871F30FACF00E80A7F /* Assets.xcassets in Resources */,
+				73A8FF0F235E7E63000DA80A /* GoogleService-Info.plist in Resources */,
 				70C1B3851F30FACF00E80A7F /* Main.storyboard in Resources */,
 				706EF0911F563792009931E7 /* Sources in Resources */,
 			);
@@ -239,13 +244,17 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AiraVisionSim/Pods-AiraVisionSim-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MiniLayout/MiniLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/MultiToggleButton/MultiToggleButton.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MiniLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MultiToggleButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -258,12 +267,13 @@
 			files = (
 			);
 			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 81e9569b57846338c57a70550751894c3816266f e5d1a21d5a1a1ef94bc6942d4255628261b6b328887a80f967c76da19901646e";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
 		};
 		70E937401F57370800A18F8F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
