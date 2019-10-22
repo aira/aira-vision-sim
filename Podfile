@@ -8,6 +8,7 @@ target 'AiraVisionSim' do
   # Pods for AiraVisionSim
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'Firebase/Analytics'
   pod 'SwiftLint'
   pod 'MultiToggleButton'
   pod 'MiniLayout'

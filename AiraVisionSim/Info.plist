@@ -20,20 +20,6 @@
 	<string>1.0.2</string>
 	<key>CFBundleVersion</key>
 	<string>09142017</string>
-	<key>Fabric</key>
-	<dict>
-		<key>APIKey</key>
-		<string>81e9569b57846338c57a70550751894c3816266f</string>
-		<key>Kits</key>
-		<array>
-			<dict>
-				<key>KitInfo</key>
-				<dict/>
-				<key>KitName</key>
-				<string>Crashlytics</string>
-			</dict>
-		</array>
-	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
