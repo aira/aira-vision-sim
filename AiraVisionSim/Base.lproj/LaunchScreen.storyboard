@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brought to you by Aira Tech Corp." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F6-96-oHG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Aira Tech Corp." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F6-96-oHG">
                                 <rect key="frame" x="10" y="636" width="355" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Q0c-ny-h02"/>
@@ -35,12 +35,21 @@
                                     <constraint firstAttribute="height" constant="92" id="bWZ-d3-cTG"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vision Simulator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyY-ko-428">
+                                <rect key="frame" x="90.5" y="387" width="194.5" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="XyY-ko-428" firstAttribute="centerX" secondItem="Vqe-he-BBM" secondAttribute="centerX" id="CKA-Ni-A4d"/>
+                            <constraint firstItem="XyY-ko-428" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="K8E-f0-B9e"/>
                             <constraint firstAttribute="trailing" secondItem="6F6-96-oHG" secondAttribute="trailing" constant="10" id="Kcz-hJ-Z8n"/>
                             <constraint firstItem="Vqe-he-BBM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Oie-PK-EZj"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="6F6-96-oHG" secondAttribute="bottom" constant="10" id="QCP-g3-ZSj"/>
+                            <constraint firstItem="XyY-ko-428" firstAttribute="top" secondItem="Vqe-he-BBM" secondAttribute="bottom" constant="7.5" id="jki-TU-oeA"/>
                             <constraint firstItem="Vqe-he-BBM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="l0V-XL-i7p"/>
                             <constraint firstItem="6F6-96-oHG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="10" id="vyk-CQ-BuK"/>
                         </constraints>
