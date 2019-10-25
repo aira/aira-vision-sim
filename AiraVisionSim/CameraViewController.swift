@@ -69,7 +69,6 @@ class CameraViewController: UIViewController {
                 overlayView.image = UIImage(named: "mac_late")
             default:
                 overlayView.image = UIImage(named: "mac_early")
-                break
             }
         case "Retinal Detachment":
             switch segmentedControl.selectedSegmentIndex {
@@ -81,7 +80,6 @@ class CameraViewController: UIViewController {
                 overlayView.image = UIImage(named: "retinal_detachment2")
             default:
                 overlayView.image = UIImage(named: "rd")
-                break
             }
         case "Stargardt Disease":
             switch segmentedControl.selectedSegmentIndex {
@@ -93,7 +91,6 @@ class CameraViewController: UIViewController {
                 overlayView.image = UIImage(named: "mac_late")
             default:
                 overlayView.image = UIImage(named: "mac_early")
-                break
             }
         case "Leber Hereditary Optic Neuropathy (LHON)":
             switch segmentedControl.selectedSegmentIndex {
@@ -105,7 +102,6 @@ class CameraViewController: UIViewController {
                 overlayView.image = UIImage(named: "mac_late")
             default:
                 overlayView.image = UIImage(named: "mac_early")
-                break
             }
         case "Diabetic Retinopathy":
             switch segmentedControl.selectedSegmentIndex {
