@@ -13,7 +13,7 @@ Here's more about us and our mission https://aira.io/
 
 Use the Disease model to add new diseases.
 
-* Name of disease (title) 
+* Name of disease (title)
 * Description (description)
 * Areas of the eye affected (areasAffected)
 * Inherited or not (inherited)
@@ -34,7 +34,7 @@ init(title:String, description:String, areasAffected:String, people:String, inhe
 
 Download the repository and click run.
 
-## License 
+## License
 
 Copyright 2017 Aira Tech Corp.
 
@@ -49,11 +49,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-## Creator
-
-Haasith Sanka
-https://github.com/Hsanka6
 
 
 [swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
